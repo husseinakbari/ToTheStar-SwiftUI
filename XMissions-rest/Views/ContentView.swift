@@ -8,6 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var contentVM: ContentVM
+    
+    init() {
+        self.contentVM = ContentVM()
+    }
+    
     var body: some View {
         Text("Hello, world!")
             .padding()
