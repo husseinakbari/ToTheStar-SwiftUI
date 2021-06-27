@@ -13,6 +13,15 @@
 		83EFEDA42687A0CC001031FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83EFEDA32687A0CC001031FE /* Assets.xcassets */; };
 		83EFEDA72687A0CC001031FE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83EFEDA62687A0CC001031FE /* Preview Assets.xcassets */; };
 		83EFEDB32687A7CF001031FE /* ContentVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EFEDB22687A7CF001031FE /* ContentVM.swift */; };
+		83EFEDB626888505001031FE /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EFEDB526888505001031FE /* Network.swift */; };
+		83EFEDB82688869A001031FE /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EFEDB72688869A001031FE /* URLs.swift */; };
+		83EFEDBA26888A2A001031FE /* NetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EFEDB926888A2A001031FE /* NetworkModel.swift */; };
+		83EFEDBE2688CF10001031FE /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EFEDBD2688CF10001031FE /* Models.swift */; };
+		83EFEDC02688D083001031FE /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EFEDBF2688D083001031FE /* HomeVM.swift */; };
+		83EFEDC72688D2FA001031FE /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EFEDC62688D2FA001031FE /* Tools.swift */; };
+		83EFEDC92688D402001031FE /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EFEDC82688D402001031FE /* TabBarView.swift */; };
+		83EFEDCB2688D45F001031FE /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EFEDCA2688D45F001031FE /* HomeView.swift */; };
+		83EFEDCD2688D46E001031FE /* CompanyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EFEDCC2688D46E001031FE /* CompanyView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +33,15 @@
 		83EFEDA62687A0CC001031FE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		83EFEDA82687A0CC001031FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83EFEDB22687A7CF001031FE /* ContentVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentVM.swift; sourceTree = "<group>"; };
+		83EFEDB526888505001031FE /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		83EFEDB72688869A001031FE /* URLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
+		83EFEDB926888A2A001031FE /* NetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkModel.swift; sourceTree = "<group>"; };
+		83EFEDBD2688CF10001031FE /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		83EFEDBF2688D083001031FE /* HomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
+		83EFEDC62688D2FA001031FE /* Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
+		83EFEDC82688D402001031FE /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		83EFEDCA2688D45F001031FE /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		83EFEDCC2688D46E001031FE /* CompanyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyView.swift; sourceTree = "<group>"; };
 		D2C09A29286A9D6C53DD299D /* Pods-XMissions-rest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XMissions-rest.release.xcconfig"; path = "Target Support Files/Pods-XMissions-rest/Pods-XMissions-rest.release.xcconfig"; sourceTree = "<group>"; };
 		D4A8564F8CD4570DB7EF5D38 /* Pods-XMissions-rest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XMissions-rest.debug.xcconfig"; path = "Target Support Files/Pods-XMissions-rest/Pods-XMissions-rest.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -71,9 +89,11 @@
 			isa = PBXGroup;
 			children = (
 				83EFED9F2687A0CA001031FE /* XMissions_restApp.swift */,
+				83EFEDB426888497001031FE /* Services */,
 				83EFEDAE2687A688001031FE /* Views */,
 				83EFEDB02687A6BF001031FE /* View Models */,
 				83EFEDAF2687A6A2001031FE /* Models */,
+				83EFEDC52688D2D8001031FE /* Tools */,
 				83EFEDA32687A0CC001031FE /* Assets.xcassets */,
 				83EFEDA82687A0CC001031FE /* Info.plist */,
 				83EFEDA52687A0CC001031FE /* Preview Content */,
@@ -93,6 +113,8 @@
 			isa = PBXGroup;
 			children = (
 				83EFEDA12687A0CA001031FE /* ContentView.swift */,
+				83EFEDCA2688D45F001031FE /* HomeView.swift */,
+				83EFEDCC2688D46E001031FE /* CompanyView.swift */,
 				83EFEDB12687A77F001031FE /* Components */,
 			);
 			path = Views;
@@ -101,6 +123,8 @@
 		83EFEDAF2687A6A2001031FE /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				83EFEDB926888A2A001031FE /* NetworkModel.swift */,
+				83EFEDBD2688CF10001031FE /* Models.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -109,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				83EFEDB22687A7CF001031FE /* ContentVM.swift */,
+				83EFEDBF2688D083001031FE /* HomeVM.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -116,8 +141,26 @@
 		83EFEDB12687A77F001031FE /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				83EFEDC82688D402001031FE /* TabBarView.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		83EFEDB426888497001031FE /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				83EFEDB526888505001031FE /* Network.swift */,
+				83EFEDB72688869A001031FE /* URLs.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		83EFEDC52688D2D8001031FE /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				83EFEDC62688D2FA001031FE /* Tools.swift */,
+			);
+			path = Tools;
 			sourceTree = "<group>";
 		};
 		8B61D44E4A796A3C89813C16 /* Frameworks */ = {
@@ -241,8 +284,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83EFEDBA26888A2A001031FE /* NetworkModel.swift in Sources */,
+				83EFEDB82688869A001031FE /* URLs.swift in Sources */,
+				83EFEDCD2688D46E001031FE /* CompanyView.swift in Sources */,
 				83EFEDB32687A7CF001031FE /* ContentVM.swift in Sources */,
+				83EFEDC02688D083001031FE /* HomeVM.swift in Sources */,
+				83EFEDBE2688CF10001031FE /* Models.swift in Sources */,
+				83EFEDCB2688D45F001031FE /* HomeView.swift in Sources */,
 				83EFEDA22687A0CA001031FE /* ContentView.swift in Sources */,
+				83EFEDC72688D2FA001031FE /* Tools.swift in Sources */,
+				83EFEDB626888505001031FE /* Network.swift in Sources */,
+				83EFEDC92688D402001031FE /* TabBarView.swift in Sources */,
 				83EFEDA02687A0CA001031FE /* XMissions_restApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

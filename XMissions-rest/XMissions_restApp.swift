@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct XMissions_restApp: App {
+    @StateObject private var contentVM = ContentVM()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(contentVM)
         }
     }
 }
