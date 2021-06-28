@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct CustomAlertModel {
-    var isShow: Bool
+    var show: Bool
     let title: String
-    let message: String?
-    let primaryButton: Alert.Button?
-    let secondaryButton: Alert.Button?
+    let message: String
+    let primaryButton: Alert.Button
+    let secondaryButton: Alert.Button
 }
 
 struct TabItemModel {

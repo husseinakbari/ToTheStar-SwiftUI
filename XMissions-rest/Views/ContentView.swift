@@ -36,12 +36,12 @@ struct ContentView: View {
             
         }
         .ignoresSafeArea(.all, edges: [.bottom, .top])
-        .alert(isPresented: self.$contentVM.customAlert.isShow, content: {
+        .alert(isPresented: $contentVM.customAlert.show, content: {
             Alert(
                 title: Text(contentVM.customAlert.title),
-                message: Text(contentVM.customAlert.message ?? ""),
-                primaryButton: contentVM.customAlert.primaryButton ?? .default(Text("Got it")),
-                secondaryButton: contentVM.customAlert.secondaryButton ?? .default(Text("Got it"))
+                message: Text(contentVM.customAlert.message),
+                primaryButton: contentVM.customAlert.primaryButton,
+                secondaryButton: contentVM.customAlert.secondaryButton
             )
         })
     }

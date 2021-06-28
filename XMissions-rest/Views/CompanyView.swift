@@ -8,14 +8,30 @@
 import SwiftUI
 
 struct CompanyView: View {
+    @EnvironmentObject var contentVM: ContentVM
+    @ObservedObject var companyVM: CompanyVM
+    
+    init() {
+        self.companyVM = CompanyVM()
+    }
+    
     var body: some View {
-        Text("Company")
-            .foregroundColor(.white)
+        
+        ZStack {
+            Color("navy-blue").edgesIgnoringSafeArea(.all)
+            
+            VStack {
+                Text("Company")
+                    .foregroundColor(.white)
+            }
+            
+        }        
     }
 }
 
 struct CompanyView_Previews: PreviewProvider {
     static var previews: some View {
         CompanyView()
+            .environmentObject(ContentVM())
     }
 }

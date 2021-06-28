@@ -10,8 +10,8 @@ import Alamofire
 
 final class Network {
     
-    static func getAllHistorical(completion: @escaping ([HistoryModel]?, ErrorTypes) -> ()) {
-        AF.request(URLs.history, method: .get)
+    static func getCompanyData(completion: @escaping (CompanyModel?, ErrorTypes) -> ()) {
+        AF.request(URLs.company, method: .get)
             .validate()
             .responseJSON { response in
                 switch response.result {
@@ -23,7 +23,7 @@ final class Network {
                     }
                     
                     do {
-                        let result = try JSONDecoder().decode([HistoryModel].self, from: data)
+                        let result = try JSONDecoder().decode(CompanyModel.self, from: data)
                         
                         completion(result, .none)
                         

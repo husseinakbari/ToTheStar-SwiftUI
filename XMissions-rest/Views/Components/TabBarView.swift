@@ -49,8 +49,7 @@ extension TabItemModel {
     static func items() -> [TabItemModel] {
         return [
             TabItemModel(label: "Home", image: UIImage(named: "globe-americas")),
-            TabItemModel(label: "Missions", image: UIImage(named: "bullseye-arrow")),
-            TabItemModel(label: "Company", image: UIImage(named: "industry-alt")),
+            TabItemModel(label: "Company", image: UIImage(named: "industry-alt"))
         ]
     }
 }

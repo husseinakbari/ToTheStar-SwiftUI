@@ -11,22 +11,30 @@ enum ErrorTypes {
     case none
     case network
 }
-
-struct HistoryModel: Codable {
-    let id: Int
-    let title: String?
-    let event_date_utc: String?
-    let flight_number: Int?
-    let details: String?
-    let links: LinksModel?
+// MARK: - Comapny Response
+struct CompanyModel: Codable {
+    let name: String
+    let founder: String
+    let founded: Int
+    let employees: Int
+    let ceo: String
+    let cto: String
+    let coo: String
+    let valuation: Double
+    let summary: String
+    let headquarters: HeadquartersModel
+    let links: LinksModel
 }
 
-struct HistoryQuery: Codable {
-    let id: Int
+struct HeadquartersModel: Codable {
+    let address: String
+    let city: String
+    let state: String
 }
 
 struct LinksModel: Codable {
-    let reddit: String?
-    let article: String?
-    let wikipedia: String?
+    let website: String
+    let flickr: String
+    let twitter: String
+    let elon_twitter: String
 }

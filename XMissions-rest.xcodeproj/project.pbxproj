@@ -22,6 +22,7 @@
 		83EFEDC92688D402001031FE /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EFEDC82688D402001031FE /* TabBarView.swift */; };
 		83EFEDCB2688D45F001031FE /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EFEDCA2688D45F001031FE /* HomeView.swift */; };
 		83EFEDCD2688D46E001031FE /* CompanyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EFEDCC2688D46E001031FE /* CompanyView.swift */; };
+		83EFEDCF2689ECDE001031FE /* CompanyVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EFEDCE2689ECDE001031FE /* CompanyVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		83EFEDC82688D402001031FE /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		83EFEDCA2688D45F001031FE /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		83EFEDCC2688D46E001031FE /* CompanyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyView.swift; sourceTree = "<group>"; };
+		83EFEDCE2689ECDE001031FE /* CompanyVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyVM.swift; sourceTree = "<group>"; };
 		D2C09A29286A9D6C53DD299D /* Pods-XMissions-rest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XMissions-rest.release.xcconfig"; path = "Target Support Files/Pods-XMissions-rest/Pods-XMissions-rest.release.xcconfig"; sourceTree = "<group>"; };
 		D4A8564F8CD4570DB7EF5D38 /* Pods-XMissions-rest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XMissions-rest.debug.xcconfig"; path = "Target Support Files/Pods-XMissions-rest/Pods-XMissions-rest.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -134,6 +136,7 @@
 			children = (
 				83EFEDB22687A7CF001031FE /* ContentVM.swift */,
 				83EFEDBF2688D083001031FE /* HomeVM.swift */,
+				83EFEDCE2689ECDE001031FE /* CompanyVM.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -284,6 +287,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83EFEDCF2689ECDE001031FE /* CompanyVM.swift in Sources */,
 				83EFEDBA26888A2A001031FE /* NetworkModel.swift in Sources */,
 				83EFEDB82688869A001031FE /* URLs.swift in Sources */,
 				83EFEDCD2688D46E001031FE /* CompanyView.swift in Sources */,

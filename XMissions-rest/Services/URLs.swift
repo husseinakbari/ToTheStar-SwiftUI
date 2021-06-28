@@ -7,6 +7,8 @@
 
 import Foundation
 
+private let baseUrl = "https://api.spacexdata.com/v4"
+
 struct URLs {
-    static let history = "https://api.spacexdata.com/v3/history"
+    static let company = "\(baseUrl)/company"
 }

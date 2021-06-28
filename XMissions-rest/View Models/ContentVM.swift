@@ -6,30 +6,31 @@
 //
 
 import SwiftUI
-import Alamofire
 
-class ContentVM: ObservableObject {
-    @Published var customAlert = CustomAlertModel(isShow: false, title: "", message: "", primaryButton: nil, secondaryButton: nil)
+final class ContentVM: ObservableObject {
     @Published var tabBarSelection: Int = 0
+    @Published var customAlert = CustomAlertModel(show: false, title: "", message: "", primaryButton: .default(Text("Got it")), secondaryButton: .default(Text("Got it")))
+    @Published var company: CompanyModel?
     
-    func getInitialData() {
-        print("Get Inital")
-        
-        Network.getAllHistorical { result, error in
-            if let histories = result, error == .none {
-                print(histories)
+    init() {
+        getCompanyData()
+    }
+    
+    private func getCompanyData() {
+        Network.getCompanyData { data, error in
+            
+            if let data = data, error == .none {
+                print(data)
+                self.company = data
             } else if error == .network {
-                
                 self.customAlert = CustomAlertModel(
-                    isShow: true,
+                    show: true,
                     title: "Network Problem!",
                     message: "Sorry, There is problem in fetch data from server",
                     primaryButton: .destructive(Text("Close")),
-                    secondaryButton: .default(Text("Try again"), action: self.getInitialData)
+                    secondaryButton: .default(Text("Try again"), action: self.getCompanyData)
                 )
-    
             }
         }
-        
     }
 }
