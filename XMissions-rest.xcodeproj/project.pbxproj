@@ -23,6 +23,10 @@
 		83EFEDCB2688D45F001031FE /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EFEDCA2688D45F001031FE /* HomeView.swift */; };
 		83EFEDCD2688D46E001031FE /* CompanyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EFEDCC2688D46E001031FE /* CompanyView.swift */; };
 		83EFEDCF2689ECDE001031FE /* CompanyVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EFEDCE2689ECDE001031FE /* CompanyVM.swift */; };
+		83EFEDE7268A337D001031FE /* IRANYekanMobileRegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 83EFEDE4268A337D001031FE /* IRANYekanMobileRegular.ttf */; };
+		83EFEDE8268A337D001031FE /* IRANYekanMobileLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 83EFEDE5268A337D001031FE /* IRANYekanMobileLight.ttf */; };
+		83EFEDE9268A337D001031FE /* IRANYekanMobileBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 83EFEDE6268A337D001031FE /* IRANYekanMobileBold.ttf */; };
+		83EFEDED268A4367001031FE /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EFEDEC268A4367001031FE /* Font.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +48,10 @@
 		83EFEDCA2688D45F001031FE /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		83EFEDCC2688D46E001031FE /* CompanyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyView.swift; sourceTree = "<group>"; };
 		83EFEDCE2689ECDE001031FE /* CompanyVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyVM.swift; sourceTree = "<group>"; };
+		83EFEDE4268A337D001031FE /* IRANYekanMobileRegular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANYekanMobileRegular.ttf; sourceTree = "<group>"; };
+		83EFEDE5268A337D001031FE /* IRANYekanMobileLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANYekanMobileLight.ttf; sourceTree = "<group>"; };
+		83EFEDE6268A337D001031FE /* IRANYekanMobileBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANYekanMobileBold.ttf; sourceTree = "<group>"; };
+		83EFEDEC268A4367001031FE /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		D2C09A29286A9D6C53DD299D /* Pods-XMissions-rest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XMissions-rest.release.xcconfig"; path = "Target Support Files/Pods-XMissions-rest/Pods-XMissions-rest.release.xcconfig"; sourceTree = "<group>"; };
 		D4A8564F8CD4570DB7EF5D38 /* Pods-XMissions-rest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XMissions-rest.debug.xcconfig"; path = "Target Support Files/Pods-XMissions-rest/Pods-XMissions-rest.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -95,7 +103,8 @@
 				83EFEDAE2687A688001031FE /* Views */,
 				83EFEDB02687A6BF001031FE /* View Models */,
 				83EFEDAF2687A6A2001031FE /* Models */,
-				83EFEDC52688D2D8001031FE /* Tools */,
+				83EFEDC52688D2D8001031FE /* Extenstions */,
+				83EFEDDD268A3156001031FE /* Fonts */,
 				83EFEDA32687A0CC001031FE /* Assets.xcassets */,
 				83EFEDA82687A0CC001031FE /* Info.plist */,
 				83EFEDA52687A0CC001031FE /* Preview Content */,
@@ -158,12 +167,23 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
-		83EFEDC52688D2D8001031FE /* Tools */ = {
+		83EFEDC52688D2D8001031FE /* Extenstions */ = {
 			isa = PBXGroup;
 			children = (
 				83EFEDC62688D2FA001031FE /* Tools.swift */,
+				83EFEDEC268A4367001031FE /* Font.swift */,
 			);
-			path = Tools;
+			path = Extenstions;
+			sourceTree = "<group>";
+		};
+		83EFEDDD268A3156001031FE /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				83EFEDE6268A337D001031FE /* IRANYekanMobileBold.ttf */,
+				83EFEDE5268A337D001031FE /* IRANYekanMobileLight.ttf */,
+				83EFEDE4268A337D001031FE /* IRANYekanMobileRegular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		8B61D44E4A796A3C89813C16 /* Frameworks */ = {
@@ -233,7 +253,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83EFEDE7268A337D001031FE /* IRANYekanMobileRegular.ttf in Resources */,
 				83EFEDA72687A0CC001031FE /* Preview Assets.xcassets in Resources */,
+				83EFEDE9268A337D001031FE /* IRANYekanMobileBold.ttf in Resources */,
+				83EFEDE8268A337D001031FE /* IRANYekanMobileLight.ttf in Resources */,
 				83EFEDA42687A0CC001031FE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,6 +310,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83EFEDED268A4367001031FE /* Font.swift in Sources */,
 				83EFEDCF2689ECDE001031FE /* CompanyVM.swift in Sources */,
 				83EFEDBA26888A2A001031FE /* NetworkModel.swift in Sources */,
 				83EFEDB82688869A001031FE /* URLs.swift in Sources */,

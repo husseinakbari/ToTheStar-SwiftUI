@@ -13,14 +13,13 @@ final class ContentVM: ObservableObject {
     @Published var company: CompanyModel?
     
     init() {
-        getCompanyData()
+//        getCompanyData()
     }
     
     private func getCompanyData() {
         Network.getCompanyData { data, error in
             
             if let data = data, error == .none {
-                print(data)
                 self.company = data
             } else if error == .network {
                 self.customAlert = CustomAlertModel(

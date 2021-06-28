@@ -9,8 +9,10 @@ import SwiftUI
 
 struct HomeView: View {
     var body: some View {
-        Text("Home")
-            .foregroundColor(.white)
+        VStack {
+            Text("خانه")
+                .font(.yekan(size: 22, weight: .bold))
+        }
     }
 }
 
