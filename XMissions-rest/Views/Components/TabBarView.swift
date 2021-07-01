@@ -23,18 +23,18 @@ struct TabBarView: View {
             
             LazyVGrid(columns: columns, alignment: .center, spacing: 10) {
                 
-                ForEach(tabItems.indices) { index in
+                ForEach(tabItems, id:\.tag) { item in
                     VStack(alignment: .center, spacing: 7) {
-                        Image(uiImage: tabItems[index].image ?? Tools.defaultImage)
+                        Image(uiImage: item.image ?? Tools.defaultImage)
                             .resizable()
                             .frame(width: 25, height: 25, alignment: .center)
                         
-                        Text(tabItems[index].label)
+                        Text(item.label)
                             .font(.yekan(size: 14, weight: .bold))
                     }
-                    .foregroundColor(self.contentVM.tabBarSelection == index ? Color("light-blue") : Color.white)
+                    .foregroundColor(self.contentVM.tabBarSelection == item.tag ? Color("light-blue") : Color.white)
                     .onTapGesture {
-                        self.contentVM.tabBarSelection = index
+                        self.contentVM.tabBarSelection = item.tag
                     }
                 }
             }
@@ -48,8 +48,9 @@ struct TabBarView: View {
 extension TabItemModel {
     static func items() -> [TabItemModel] {
         return [
-            TabItemModel(label: "شرکت", image: UIImage(named: "industry-alt")),
-            TabItemModel(label: "خانه", image: UIImage(named: "globe-americas"))
+            TabItemModel(label: "Home", image: UIImage(named: "globe-americas"), tag: .home),
+            TabItemModel(label: "Upcoming", image: UIImage(named: "bullseye-arrow"), tag: .upcoming),
+            TabItemModel(label: "Company", image: UIImage(named: "industry-alt"), tag: .company)
         ]
     }
 }

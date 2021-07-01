@@ -18,4 +18,11 @@ struct CustomAlertModel {
 struct TabItemModel {
     let label: String
     let image: UIImage?
+    let tag:   TabItemsTag
+}
+
+enum TabItemsTag {
+    case home
+    case upcoming
+    case company
 }

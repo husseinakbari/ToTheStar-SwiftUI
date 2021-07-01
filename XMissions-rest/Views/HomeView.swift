@@ -8,10 +8,16 @@
 import SwiftUI
 
 struct HomeView: View {
+    
+    init() {
+        print("Init HOME")
+    }
+    
     var body: some View {
-        VStack {
-            Text("خانه")
-                .font(.yekan(size: 22, weight: .bold))
+        ZStack {
+            Color("navy-blue").edgesIgnoringSafeArea(.all)
+            
+            Text("Home View dsfdsffs")
         }
     }
 }

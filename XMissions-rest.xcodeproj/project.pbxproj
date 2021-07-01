@@ -27,6 +27,10 @@
 		83EFEDE8268A337D001031FE /* IRANYekanMobileLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 83EFEDE5268A337D001031FE /* IRANYekanMobileLight.ttf */; };
 		83EFEDE9268A337D001031FE /* IRANYekanMobileBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 83EFEDE6268A337D001031FE /* IRANYekanMobileBold.ttf */; };
 		83EFEDED268A4367001031FE /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EFEDEC268A4367001031FE /* Font.swift */; };
+		83EFEDF0268C469F001031FE /* UpcomingList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EFEDEF268C469F001031FE /* UpcomingList.swift */; };
+		83EFEDF2268C4A32001031FE /* MissionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EFEDF1268C4A32001031FE /* MissionCell.swift */; };
+		83EFEDF4268C4B73001031FE /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EFEDF3268C4B73001031FE /* Date.swift */; };
+		83EFEDF6268C5C94001031FE /* MissionDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EFEDF5268C5C94001031FE /* MissionDetails.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +56,10 @@
 		83EFEDE5268A337D001031FE /* IRANYekanMobileLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANYekanMobileLight.ttf; sourceTree = "<group>"; };
 		83EFEDE6268A337D001031FE /* IRANYekanMobileBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANYekanMobileBold.ttf; sourceTree = "<group>"; };
 		83EFEDEC268A4367001031FE /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		83EFEDEF268C469F001031FE /* UpcomingList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingList.swift; sourceTree = "<group>"; };
+		83EFEDF1268C4A32001031FE /* MissionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionCell.swift; sourceTree = "<group>"; };
+		83EFEDF3268C4B73001031FE /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		83EFEDF5268C5C94001031FE /* MissionDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionDetails.swift; sourceTree = "<group>"; };
 		D2C09A29286A9D6C53DD299D /* Pods-XMissions-rest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XMissions-rest.release.xcconfig"; path = "Target Support Files/Pods-XMissions-rest/Pods-XMissions-rest.release.xcconfig"; sourceTree = "<group>"; };
 		D4A8564F8CD4570DB7EF5D38 /* Pods-XMissions-rest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XMissions-rest.debug.xcconfig"; path = "Target Support Files/Pods-XMissions-rest/Pods-XMissions-rest.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -126,6 +134,7 @@
 				83EFEDA12687A0CA001031FE /* ContentView.swift */,
 				83EFEDCA2688D45F001031FE /* HomeView.swift */,
 				83EFEDCC2688D46E001031FE /* CompanyView.swift */,
+				83EFEDEE268C466B001031FE /* Launches */,
 				83EFEDB12687A77F001031FE /* Components */,
 			);
 			path = Views;
@@ -172,6 +181,7 @@
 			children = (
 				83EFEDC62688D2FA001031FE /* Tools.swift */,
 				83EFEDEC268A4367001031FE /* Font.swift */,
+				83EFEDF3268C4B73001031FE /* Date.swift */,
 			);
 			path = Extenstions;
 			sourceTree = "<group>";
@@ -184,6 +194,16 @@
 				83EFEDE4268A337D001031FE /* IRANYekanMobileRegular.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		83EFEDEE268C466B001031FE /* Launches */ = {
+			isa = PBXGroup;
+			children = (
+				83EFEDEF268C469F001031FE /* UpcomingList.swift */,
+				83EFEDF1268C4A32001031FE /* MissionCell.swift */,
+				83EFEDF5268C5C94001031FE /* MissionDetails.swift */,
+			);
+			path = Launches;
 			sourceTree = "<group>";
 		};
 		8B61D44E4A796A3C89813C16 /* Frameworks */ = {
@@ -310,11 +330,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83EFEDF0268C469F001031FE /* UpcomingList.swift in Sources */,
 				83EFEDED268A4367001031FE /* Font.swift in Sources */,
 				83EFEDCF2689ECDE001031FE /* CompanyVM.swift in Sources */,
 				83EFEDBA26888A2A001031FE /* NetworkModel.swift in Sources */,
 				83EFEDB82688869A001031FE /* URLs.swift in Sources */,
 				83EFEDCD2688D46E001031FE /* CompanyView.swift in Sources */,
+				83EFEDF4268C4B73001031FE /* Date.swift in Sources */,
 				83EFEDB32687A7CF001031FE /* ContentVM.swift in Sources */,
 				83EFEDC02688D083001031FE /* HomeVM.swift in Sources */,
 				83EFEDBE2688CF10001031FE /* Models.swift in Sources */,
@@ -323,6 +345,8 @@
 				83EFEDC72688D2FA001031FE /* Tools.swift in Sources */,
 				83EFEDB626888505001031FE /* Network.swift in Sources */,
 				83EFEDC92688D402001031FE /* TabBarView.swift in Sources */,
+				83EFEDF6268C5C94001031FE /* MissionDetails.swift in Sources */,
+				83EFEDF2268C4A32001031FE /* MissionCell.swift in Sources */,
 				83EFEDA02687A0CA001031FE /* XMissions_restApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

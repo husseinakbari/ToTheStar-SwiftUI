@@ -9,12 +9,10 @@ import SwiftUI
 
 struct CompanyView: View {
     @EnvironmentObject var contentVM: ContentVM
-    @ObservedObject var companyVM: CompanyVM
     
     init() {
-        self.companyVM = CompanyVM()
+        print("Init Company")
     }
-    
     var body: some View {
         
         ZStack {

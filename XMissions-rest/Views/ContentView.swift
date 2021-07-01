@@ -9,28 +9,33 @@ import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject var contentVM: ContentVM
+    
+    init() {
+        UINavigationBar.appearance().largeTitleTextAttributes = [
+            .foregroundColor: UIColor(Color.white),
+//            .font: UIFont.systemFont(ofSize: 26, weight: .bold)
+        ]
+    }
         
     var body: some View {
         ZStack {
-            Color("navy-blue").edgesIgnoringSafeArea(.all)
+            Color("light-gray").edgesIgnoringSafeArea(.all)
             
-            VStack {
-                Spacer()
+            VStack(spacing: 0) {
                 
                 ZStack {
                     switch self.contentVM.tabBarSelection {
-                    case 0:
+                    case .home:
                         HomeView()
-                    case 1:
+                    case .upcoming:
+                        UpcomingList()
+                    case .company:
                         CompanyView()
-                    default:
-                        EmptyView()
                     }
                 }
-                
-                Spacer()
-                
+            
                 TabBarView()
+    
             }
                 
             
