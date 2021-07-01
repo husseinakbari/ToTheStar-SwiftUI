@@ -19,7 +19,7 @@ struct MissionCell: View {
     var body: some View {
         HStack {
         
-            if let image = self.contentVM.downloadedImage {
+            if let image = contentVM.upcomingMisisons.1[mission.id] {
                 Image(uiImage: UIImage(data: image)!)
                     .resizable()
                     .frame(width: 40, height: 40, alignment: .center)

@@ -14,7 +14,7 @@ final class ContentVM: ObservableObject {
     @Published var downloadedImage: Data?
     
     @Published var company: CompanyModel?
-    @Published var upcomingMisisons = [LaunchModel]()
+    @Published var upcomingMisisons = ([LaunchModel](), [String: Data]())
     
     init() {
         getUpcomingData()
@@ -38,11 +38,22 @@ final class ContentVM: ObservableObject {
     
     func getUpcomingData() {
         self.isLoading.toggle()
-        
+        print("❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️")
         Network.getUpcomingLaunches { missions, error in
             if let missions = missions, error == .none {
-                print(missions)
-                self.upcomingMisisons = missions
+                
+                self.upcomingMisisons.0 = missions
+                
+                for mission in missions {
+                    if let URLPatch = mission.links?.patch?.small {
+                        Network.fetchData(from: URLPatch) { data, error in
+                            if let imageData = data, error == .none {
+                                self.upcomingMisisons.1[mission.id] = imageData
+                            }
+                        }
+                    }
+                }
+                
                 self.isLoading.toggle()
             } else if error == .network {
                 self.customAlert = CustomAlertModel(
@@ -54,21 +65,5 @@ final class ContentVM: ObservableObject {
                 )
             }
         }
-    }
-    
-    func downloadImage(url: String) {
-        guard let url = URL(string: url) else {
-            fatalError("Image URL is not correct")
-        }
-        
-        URLSession.shared.dataTask(with: url) { data, response, error in
-            guard let data = data, error == nil else {
-                return
-            }
-            
-            DispatchQueue.main.async {
-                self.downloadedImage = data
-            }
-        }.resume()
     }
 }

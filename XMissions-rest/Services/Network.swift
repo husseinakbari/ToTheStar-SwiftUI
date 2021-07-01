@@ -9,6 +9,24 @@ import Foundation
 import Alamofire
 
 final class Network {
+    
+    static func fetchData(from url: String, completion: @escaping (Data?, ErrorTypes) -> ()) {
+        guard let url = URL(string: url) else {
+            completion(nil, .network)
+            fatalError("❌ URL not valid")
+        }
+        
+        AF.download(url)
+            .responseData { response in
+            if response.error == nil, let data = response.value {
+                completion(data, .none)
+            } else {
+                completion(nil, .network)
+                fatalError("❌ Error in fetch data")
+            }
+        }
+    }
+    
     // MARK: - Company Request
     static func getCompanyData(completion: @escaping (CompanyModel?, ErrorTypes) -> ()) {
         AF.request(URLs.company, method: .get)
@@ -52,9 +70,9 @@ final class Network {
                     }
                     
                     do {
-                        let result = try JSONDecoder().decode([LaunchModel].self, from: data)
+                        let dataDecoded = try JSONDecoder().decode([LaunchModel].self, from: data)
                         
-                        completion(result, .none)
+                        completion(dataDecoded, .none)
                         
                     } catch let error {
                         completion(nil, .network)

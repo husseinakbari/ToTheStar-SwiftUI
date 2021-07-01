@@ -31,14 +31,13 @@ struct UpcomingList: View {
                         .listRowInsets(EdgeInsets())
                         .frame(height: 60)
                         
-                    } else if let missions = contentVM.upcomingMisisons {
+                    } else if let (missions, _) = contentVM.upcomingMisisons {
+                        
                         ForEach(missions) { mission in
                             NavigationLink(destination: MissionDetails(mission: mission)) {
                                 MissionCell(mission: mission)
                             }
                             .listRowBackground(Color("navy-blue"))
-                            
-                            
                         }
                         .listRowInsets(EdgeInsets())
                         .frame(height: 60)
