@@ -26,3 +26,21 @@ enum TabItemsTag {
     case upcoming
     case company
 }
+
+struct AssetsImages: Identifiable {
+    let id = UUID()
+    let image: Image
+}
+
+extension AssetsImages {
+    static func missions() -> [AssetsImages] {
+        return [
+            AssetsImages(image: Image("mission-1")),
+            AssetsImages(image: Image("mission-2")),
+            AssetsImages(image: Image("mission-3")),
+            AssetsImages(image: Image("mission-4")),
+            AssetsImages(image: Image("mission-5")),
+            AssetsImages(image: Image("mission-6")),
+        ]
+    }
+}
