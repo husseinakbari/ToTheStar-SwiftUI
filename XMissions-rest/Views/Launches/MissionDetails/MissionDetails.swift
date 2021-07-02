@@ -8,33 +8,43 @@
 import SwiftUI
 
 struct MissionDetails: View {
+    @ObservedObject var launchesVM: LaunchesViewModel
     let mission: LaunchModel
+    
+    init(mission: LaunchModel) {
+        self.mission = mission
+        self.launchesVM = LaunchesViewModel()
+    }
     
     var body: some View {
         ZStack {
             Color("navy-blue").edgesIgnoringSafeArea([.top,.bottom])
             
             ScrollView {
-                VStack {
                     
-                    ImageSliderView()
+                ImageSliderView()
+                
+                VStack(spacing: 20) {
+                    InformationView(mission: mission)
                     
-                    VStack(spacing: 20) {
-                        InformationView(mission: mission)
-                        
-//                        if (mission != nil) {
-//                            RocketInfo(missionDetailVM: self.missionDetailVM)
+                    if launchesVM.isLoading {
+                        RocketInfo(rocket: nil)
+                    } else if let rocket = launchesVM.rocket {
+                        RocketInfo(rocket: rocket)
+                    }
+                    
+                    
 
-//                            SiteInfo(missionDetailVM: self.missionDetailVM)
-//                        }
-                        
-                    }.padding(.all, 15)
-                    
-                    Spacer()
+//                     SiteInfo(missionDetailVM: self.missionDetailVM)
                 }
+                .padding(.all, 15)
+                
+                Spacer()
             }
             .navigationBarTitle(mission.name ?? "Unkonwn")
             .navigationBarTitleDisplayMode(.inline)
+        }.onAppear {
+            self.launchesVM.getRocketData(rocketID: mission.rocket)
         }
     }
 }

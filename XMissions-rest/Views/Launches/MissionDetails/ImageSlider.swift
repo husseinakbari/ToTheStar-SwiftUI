@@ -23,7 +23,7 @@ struct ImageSliderView: View {
             }
         }
         .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
-        .frame(maxWidth: .infinity, minHeight: 260)
+        .frame(width: UIScreen.main.bounds.width, height: 260)
         .onReceive(timer, perform: { _ in
             withAnimation {
                 currentIndex = currentIndex < 6 ? currentIndex + 1 : 0

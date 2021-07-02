@@ -17,7 +17,8 @@ struct HomeView: View {
         ZStack {
             Color("navy-blue").edgesIgnoringSafeArea(.all)
             
-            Text("Home View dsfdsffs")
+            Text("Home Page")
+                .foregroundColor(.white)
         }
     }
 }

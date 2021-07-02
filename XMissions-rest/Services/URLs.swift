@@ -12,4 +12,5 @@ private let baseUrl = "https://api.spacexdata.com/v4"
 struct URLs {
     static let company = "\(baseUrl)/company"
     static let upcomingLaunches = "\(baseUrl)/launches/upcoming"
+    static let rockets = "\(baseUrl)/rockets"
 }

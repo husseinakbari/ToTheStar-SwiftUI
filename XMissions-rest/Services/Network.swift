@@ -85,4 +85,45 @@ final class Network {
                 }
             }
     }
+    // MARK: - Rockets Request
+    static func getRockets(id: String? = nil ,completion: @escaping ([RocketModel]?, ErrorTypes) -> ()) {
+        var url = URLs.rockets
+        var rockets = [RocketModel]()
+        
+        if let rocketID = id {
+            url += "/\(rocketID)"
+        }
+
+        AF.request(url, method: .get)
+            .validate()
+            .responseJSON { response in
+                switch response.result {
+                case .success:
+
+                    guard let data = response.data else {
+                        completion(nil, .network)
+                        return
+                    }
+                    
+                    do {
+                        if id != nil {
+                            let result = try JSONDecoder().decode(RocketModel.self, from: data)
+                            rockets.append(result)
+                        } else {
+                            rockets = try JSONDecoder().decode([RocketModel].self, from: data)
+                        }
+                        
+                        completion(rockets, .none)
+
+                    } catch let error {
+                        completion(nil, .network)
+                        print("❌ \(error)")
+                    }
+
+                case let .failure(error):
+                    completion(nil, .network)
+                    print("❌ \(error)")
+                }
+            }
+    }
 }

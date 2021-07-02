@@ -69,3 +69,82 @@ struct RedditModel: Codable {
     let media: String?
     let recovery: String?
 }
+// MARK: - Rockets Response
+struct RocketModel: Codable {
+    let id: String?
+    let name: String?
+    let description: String?
+    let wikipedia: String?
+    let company: String?
+    let first_flight: String?
+    let success_rate_pct: Int?
+    let cost_per_launch: Double?
+    let boosters: Int?
+    let stages: Int?
+    let active: Bool?
+    let type: String?
+    let flickr_images: [String]?
+    let payload_weights: [PayloadWeightsModel]?
+    let landing_legs: LandingLegsModel?
+    let engines: EngineMdoel?
+    let first_stage: StageModel?
+    let second_stage: StageModel?
+    let height: LongModel?
+    let diameter: LongModel?
+    let mass: WeightModel?
+}
+
+struct LandingLegsModel: Codable {
+    let number: Int?
+    let material: String?
+}
+
+struct PayloadWeightsModel: Codable {
+    let id: String?
+    let name: String?
+    let kg: Double?
+    let lb: Double?
+}
+
+struct EngineMdoel: Codable {
+    let number: Int?
+    let type: String?
+    let version: String?
+    let layout: String?
+    let engine_loss_max: Int?
+    let propellant_1: String?
+    let propellant_2: String?
+    let thrust_to_weight: Float?
+    let thrust_sea_level: ThrustModel?
+    let thrust_vacuum: ThrustModel?
+    let isp: ISPModel?
+}
+
+struct StageModel: Codable {
+    let thrust_sea_level: ThrustModel?
+    let thrust_vacuum: ThrustModel?
+    let reusable: Bool?
+    let engines: Int?
+    let fuel_amount_tons: Int?
+    let burn_time_sec: Int?
+}
+
+struct ThrustModel: Codable {
+    let kN: Double?
+    let lbf: Double?
+}
+
+struct ISPModel: Codable {
+    let sea_level: Int?
+    let vacuum: Int?
+}
+
+struct LongModel: Codable {
+    let meters: Float?
+    let feet: Float?
+}
+
+struct WeightModel: Codable {
+    let kg: Double?
+    let lb: Double?
+}

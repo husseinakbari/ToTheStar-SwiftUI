@@ -19,6 +19,11 @@ struct BlueBox: ViewModifier {
         .background(Color("mid-blue"))
         .cornerRadius(5)
     }
+    static func divider() -> some View {
+        VStack{}
+            .frame(maxWidth: .infinity, minHeight: 0.5)
+            .background(Color("dark-gray"))
+    }
 }
 
 extension View {
