@@ -9,16 +9,20 @@ import SwiftUI
 
 struct RocketInfo: View {
     let rocket: RocketModel?
+    @State private var showRocketView: Bool = false
     
     var body: some View {
         if let rocket = rocket {
             VStack(spacing: 0) {
-                HeaderLabel(title: "Rocket",paddingBottom: 8)
+                HeaderLabel(title: "Rocket")
 
                 VStack(alignment: .leading, spacing: 10) {
 
                     if let name = rocket.name {
                         RowData(label: "Name", value: name)
+                            .onTapGesture {
+                                self.showRocketView.toggle()
+                            }
                     }
                     if let company = rocket.company {
                         RowData(label: "Company", value: company)
@@ -44,6 +48,9 @@ struct RocketInfo: View {
                 }
                 .blueBox()
             }
+            .sheet(isPresented: self.$showRocketView, content: {
+                RocketView(rocket: rocket)
+            })
         } else {
             VStack(spacing: 0) {
                 HeaderLabel(title: "Rocket",paddingBottom: 8)

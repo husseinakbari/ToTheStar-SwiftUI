@@ -14,7 +14,7 @@ struct HeaderLabel: View {
     let paddingLeading: CGFloat
     let color: Color
     
-    init(title: String, size: CGFloat = 18, paddingBottom: CGFloat = 10, paddingLeading: CGFloat = 0, color: Color = .white) {
+    init(title: String, size: CGFloat = 18, paddingBottom: CGFloat = 8, paddingLeading: CGFloat = 0, color: Color = .white) {
         self.title = title
         self.size = size
         self.paddingBottom = paddingBottom
