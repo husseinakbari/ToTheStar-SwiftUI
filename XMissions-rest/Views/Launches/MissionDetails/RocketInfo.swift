@@ -16,13 +16,10 @@ struct RocketInfo: View {
             VStack(spacing: 0) {
                 HeaderLabel(title: "Rocket")
 
-                VStack(alignment: .leading, spacing: 10) {
+                VStack(alignment: .center, spacing: 10) {
 
                     if let name = rocket.name {
                         RowData(label: "Name", value: name)
-                            .onTapGesture {
-                                self.showRocketView.toggle()
-                            }
                     }
                     if let company = rocket.company {
                         RowData(label: "Company", value: company)
@@ -43,7 +40,13 @@ struct RocketInfo: View {
                     if let successRate = rocket.success_rate_pct {
                         RowData(label: "Success rate", value: successRate.percent)
                     }
-
+                    
+                    Text("More")
+                        .foregroundColor(.blue)
+                        .font(.system(size: 14, weight: .semibold, design: .rounded))
+                        .onTapGesture {
+                            self.showRocketView.toggle()
+                        }
 
                 }
                 .blueBox()

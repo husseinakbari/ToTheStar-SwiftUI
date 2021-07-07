@@ -8,7 +8,14 @@
 import SwiftUI
 
 struct RocketView: View {
+    @ObservedObject var launchVM: LaunchesViewModel
     let rocket: RocketModel
+    
+    init(rocket: RocketModel) {
+        self.launchVM = LaunchesViewModel()
+        self.rocket = rocket
+        self.launchVM.getFlikerImages(links: rocket.flickr_images ?? [])
+    }
     
     var body: some View {
         ZStack {
@@ -25,7 +32,13 @@ struct RocketView: View {
                     
                     HeaderLabel(title: rocket.name ?? "Rocket name", size: 24, paddingBottom: 0, paddingLeading: 15, color: .white)
                     
-                    ImageSliderView()
+                    if rocket.flickr_images?.count == launchVM.flickerImages.count {
+                        ImageSliderView2(images: self.launchVM.flickerImages)
+                    } else {
+                        ImageSliderView2(images: [], loading: true)
+                    }
+                    
+                    
                     
                     VStack(spacing: 20) {
                     

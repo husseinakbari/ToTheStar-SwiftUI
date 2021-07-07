@@ -22,7 +22,7 @@ final class Network {
                 completion(data, .none)
             } else {
                 completion(nil, .network)
-                fatalError("❌ Error in fetch data")
+                print("❌ Error in fetch data")
             }
         }
     }

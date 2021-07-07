@@ -14,7 +14,7 @@ struct Description: View {
         VStack(spacing: 0) {
             HeaderLabel(title: "Description")
             
-            VStack(spacing: 10) {
+            VStack(alignment: .leading, spacing: 10) {
                 if let company = rocket.company {
                     RowData(label: "Company", value: company)
                 }
@@ -29,6 +29,12 @@ struct Description: View {
                 }
                 RowData(rowType: .bool, label: "Active", value: "", bool: rocket.active ?? false)
                 
+                if let wikipedia = rocket.wikipedia {
+                    Link("More...", destination: URL(string: wikipedia)!)
+                        .foregroundColor(.blue)
+                        .font(.system(size: 14, weight: .semibold, design: .rounded))
+                }
+                
                 if let desc = rocket.description {
                     BlueBox.divider()
                     Text(desc)
@@ -36,6 +42,8 @@ struct Description: View {
                         .font(.system(size: 14, weight: .medium, design: .rounded))
                         .frame(maxWidth: .infinity, alignment: .center)
                 }
+                
+                
             }.blueBox()
         }
     }

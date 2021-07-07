@@ -11,6 +11,7 @@ import Combine
 final class LaunchesViewModel: ObservableObject {
     @Published var isLoading: Bool = false
     @Published var rocket: RocketModel?
+    @Published var flickerImages = [Data]()
     
     func getRocketData(rocketID: String? = nil) {
         self.isLoading.toggle()
@@ -23,6 +24,19 @@ final class LaunchesViewModel: ObservableObject {
                 
             } else if error == .network {
                 
+            }
+        }
+    }
+    
+    func getFlikerImages(links: [String]) {
+    
+        if links.count > 0 {
+            for link in links {
+                Network.fetchData(from: link) { data, error in
+                    if let data = data, error == .none {
+                        self.flickerImages.append(data)
+                    }
+                }
             }
         }
     }

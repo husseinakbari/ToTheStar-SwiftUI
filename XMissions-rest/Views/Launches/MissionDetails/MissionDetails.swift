@@ -22,7 +22,7 @@ struct MissionDetails: View {
             
             ScrollView {
                     
-                ImageSliderView()
+                ImageSliderView(images: Tools.missionsImages())
                 
                 VStack(spacing: 20) {
                     InformationView(mission: mission)
