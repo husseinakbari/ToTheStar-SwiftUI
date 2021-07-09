@@ -27,7 +27,12 @@ struct Stages: View {
                     if let engines = fristStage.engines {
                         RowData(label: "Engines", value: "\(engines)")
                     }
-                    RowData(rowType: .bool, label: "Reusable", value: "", bool: fristStage.reusable ?? false)
+                    if fristStage.reusable != nil {
+                        RowData(rowType: .bool, label: "Reusable", value: String(fristStage.reusable ?? false))
+                    } else {
+                        RowData(rowType: .bool, label: "Reusable", value: "")
+                    }
+                    
                 }
                 
                 if let secondStage = rocket.second_stage {
@@ -42,7 +47,12 @@ struct Stages: View {
                     if let engines = secondStage.engines {
                         RowData(label: "Engines", value: "\(engines)")
                     }
-                    RowData(rowType: .bool, label: "Reusable", value: "", bool: secondStage.reusable ?? false)
+                    if secondStage.reusable != nil {
+                        RowData(rowType: .bool, label: "Reusable", value: String(secondStage.reusable ?? false))
+                    } else {
+                        RowData(rowType: .bool, label: "Reusable", value: "")
+                    }
+                    
                 }
         
             }.blueBox()

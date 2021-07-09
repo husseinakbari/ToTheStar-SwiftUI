@@ -24,8 +24,12 @@ struct RocketInfo: View {
                     if let company = rocket.company {
                         RowData(label: "Company", value: company)
                     }
-                    RowData(rowType: .bool, label: "Active", value: "", bool: rocket.active ?? false)
-
+                    if rocket.active != nil {
+                        RowData(rowType: .bool, label: "Active", value: String(rocket.active ?? false))
+                    } else {
+                        RowData(rowType: .bool, label: "Active", value: "")
+                    }
+                    
                     BlueBox.divider()
 
                     if let weight = rocket.mass?.kg {

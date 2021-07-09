@@ -51,6 +51,7 @@ struct LaunchModel: Codable, Identifiable {
 }
 
 struct LauncheLinkModel: Codable {
+    let presskit: String?
     let patch: PatchModel?
     let reddit: RedditModel?
     let webcast: String?

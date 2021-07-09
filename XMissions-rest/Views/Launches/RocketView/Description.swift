@@ -27,7 +27,11 @@ struct Description: View {
                 if let successRate = rocket.success_rate_pct {
                     RowData(label: "Success rate", value: successRate.percent)
                 }
-                RowData(rowType: .bool, label: "Active", value: "", bool: rocket.active ?? false)
+                if rocket.active != nil {
+                    RowData(rowType: .bool, label: "Active", value: String(rocket.active ?? false))
+                } else {
+                    RowData(rowType: .bool, label: "Active", value: "")
+                }
                 
                 if let wikipedia = rocket.wikipedia {
                     Link("More...", destination: URL(string: wikipedia)!)

@@ -17,6 +17,7 @@
 		830DD667268ED464000B85C3 /* RocketInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830DD666268ED464000B85C3 /* RocketInfo.swift */; };
 		830DD669268ED4FF000B85C3 /* RowData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830DD668268ED4FF000B85C3 /* RowData.swift */; };
 		830DD66B268EE8EC000B85C3 /* Numeric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830DD66A268EE8EC000B85C3 /* Numeric.swift */; };
+		8326C5DA26982F36003A52DF /* LauncheDesc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8326C5D926982F36003A52DF /* LauncheDesc.swift */; };
 		837015982690711C0088542A /* RocketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837015972690711C0088542A /* RocketView.swift */; };
 		83DFAE142690E81800EDD77C /* Engines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DFAE132690E81800EDD77C /* Engines.swift */; };
 		83DFAE162690EBDA00EDD77C /* Stages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DFAE152690EBDA00EDD77C /* Stages.swift */; };
@@ -56,6 +57,7 @@
 		830DD666268ED464000B85C3 /* RocketInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketInfo.swift; sourceTree = "<group>"; };
 		830DD668268ED4FF000B85C3 /* RowData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowData.swift; sourceTree = "<group>"; };
 		830DD66A268EE8EC000B85C3 /* Numeric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Numeric.swift; sourceTree = "<group>"; };
+		8326C5D926982F36003A52DF /* LauncheDesc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LauncheDesc.swift; sourceTree = "<group>"; };
 		837015972690711C0088542A /* RocketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketView.swift; sourceTree = "<group>"; };
 		83DFAE132690E81800EDD77C /* Engines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Engines.swift; sourceTree = "<group>"; };
 		83DFAE152690EBDA00EDD77C /* Stages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stages.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				830DD65A268DFB59000B85C3 /* ImageSlider.swift */,
 				830DD65E268DFC43000B85C3 /* Information.swift */,
 				830DD666268ED464000B85C3 /* RocketInfo.swift */,
+				8326C5D926982F36003A52DF /* LauncheDesc.swift */,
 			);
 			path = MissionDetails;
 			sourceTree = "<group>";
@@ -392,6 +395,7 @@
 				830DD65B268DFB59000B85C3 /* ImageSlider.swift in Sources */,
 				830DD658268DE8DA000B85C3 /* View.swift in Sources */,
 				830DD663268E2CFE000B85C3 /* LaunchesVM.swift in Sources */,
+				8326C5DA26982F36003A52DF /* LauncheDesc.swift in Sources */,
 				83EFEDF4268C4B73001031FE /* Date.swift in Sources */,
 				83EFEDB32687A7CF001031FE /* ContentVM.swift in Sources */,
 				83DFAE1A2690EC6700EDD77C /* Description.swift in Sources */,

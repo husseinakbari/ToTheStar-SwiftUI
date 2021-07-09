@@ -27,15 +27,14 @@ struct MissionDetails: View {
                 VStack(spacing: 20) {
                     InformationView(mission: mission)
                     
+                    LauncheDesc(launch: mission)
+                    
                     if launchesVM.isLoading {
                         RocketInfo(rocket: nil)
                     } else if let rocket = launchesVM.rocket {
                         RocketInfo(rocket: rocket)
                     }
                     
-                    
-
-//                     SiteInfo(missionDetailVM: self.missionDetailVM)
                 }
                 .padding(.all, 15)
                 

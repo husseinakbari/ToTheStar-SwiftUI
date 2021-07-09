@@ -59,18 +59,6 @@ struct InformationView: View {
                 
                 Spacer()
             }
-            
-            if let details = mission.details {
-                LabelDivider(label: "Details")
-            
-                VStack(alignment: .leading) {
-                    Text(details)
-                        .foregroundColor(Color("light-gray"))
-                        .font(.system(size: 14, weight: .medium, design: .rounded))
-                        .frame(maxWidth: .infinity, alignment: .center)
-                }
-            }
-            
         }
         .blueBox()
     }
