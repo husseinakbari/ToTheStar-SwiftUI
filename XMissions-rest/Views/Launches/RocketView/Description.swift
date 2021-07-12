@@ -19,7 +19,7 @@ struct Description: View {
                     RowData(label: "Company", value: company)
                 }
                 if let firstFlight = rocket.first_flight {
-                    RowData(label: "Frist launch", value: Date.dateFormatter(time: firstFlight))
+                    RowData(label: "Frist launch", value: Date.dateFormatter(time: firstFlight, getFormate: "yyyy-MM-dd", printFormate: "MMM dd,yyyy"))
                 }
                 if let costLaunch = rocket.cost_per_launch {
                     RowData(label: "Launch cost", value: costLaunch.currencyUS)

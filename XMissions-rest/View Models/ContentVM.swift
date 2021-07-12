@@ -15,9 +15,11 @@ final class ContentVM: ObservableObject {
     
     @Published var company: CompanyModel?
     @Published var upcomingMisisons = ([LaunchModel](), [String: Data]())
+    @Published var pastLaunches = ([LaunchModel](), [String: Data]())
     
     init() {
         getUpcomingData()
+        getPastLaunchData()
     }
     
     private func getCompanyData() {
@@ -65,5 +67,37 @@ final class ContentVM: ObservableObject {
                 )
             }
         }
+    }
+    
+    func getPastLaunchData() {
+        self.isLoading.toggle()
+        print("🏀🏀🏀🏀🏀🏀")
+        Network.getPastLaunches { launches, error in
+            if let launches = launches, error == .none {
+                
+                self.pastLaunches.0 = launches
+                
+                for launche in launches {
+                    if let URLPatch = launche.links?.patch?.small {
+                        Network.fetchData(from: URLPatch) { data, error in
+                            if let imageData = data, error == .none {
+                                self.pastLaunches.1[launche.id] = imageData
+                            }
+                        }
+                    }
+                }
+                
+                self.isLoading.toggle()
+            } else if error == .network {
+                self.customAlert = CustomAlertModel(
+                    show: true,
+                    title: "Network Problem!",
+                    message: "Sorry, There is problem in fetch data from server",
+                    primaryButton: .destructive(Text("Close")),
+                    secondaryButton: .default(Text("Try again"), action: self.getCompanyData)
+                )
+            }
+        }
+
     }
 }

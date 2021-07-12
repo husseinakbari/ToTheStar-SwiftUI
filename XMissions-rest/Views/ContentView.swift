@@ -31,6 +31,8 @@ struct ContentView: View {
                         UpcomingList()
                     case .company:
                         CompanyView()
+                    case .past:
+                        PastList()
                     }
                 }
             

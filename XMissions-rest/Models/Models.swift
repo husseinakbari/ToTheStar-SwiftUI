@@ -25,4 +25,5 @@ enum TabItemsTag {
     case home
     case upcoming
     case company
+    case past
 }

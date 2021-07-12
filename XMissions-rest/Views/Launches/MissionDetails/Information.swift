@@ -10,7 +10,8 @@ import SwiftUI
 struct InformationView: View {
     @EnvironmentObject var contentVM: ContentVM
     
-    let mission: LaunchModel
+    let launch: LaunchModel
+    let launcheImage: Data
     private let frameSize = CGFloat(50)
     
     
@@ -19,8 +20,8 @@ struct InformationView: View {
             HStack {
                 
                 HStack {
-                    if let image = contentVM.upcomingMisisons.1[mission.id] {
-                        Image(uiImage: UIImage(data: image)!)
+                    if !launcheImage.isEmpty {
+                        Image(uiImage: UIImage(data: launcheImage)!)
                             .resizable()
                             .frame(width: frameSize, height: frameSize, alignment: .center)
                             .foregroundColor(.black)
@@ -38,11 +39,11 @@ struct InformationView: View {
                 }
                 
                 VStack(alignment: .leading) {
-                    Text(mission.name ?? "Unknown")
+                    Text(launch.name ?? "Unknown")
                         .foregroundColor(.white)
                         .font(.system(size: 16, weight: .bold, design: .rounded))
                     
-                    if let launchDate = mission.date_utc {
+                    if let launchDate = launch.date_utc {
                         HStack {
                             Image(systemName: "calendar.badge.clock")
                                 .resizable()
@@ -66,7 +67,7 @@ struct InformationView: View {
 
 struct InformationView_Previews: PreviewProvider {
     static var previews: some View {
-        InformationView(mission: LaunchModel(id: "", name: "Unknown", flight_number: 1, date_utc: "", success: false, links: nil, details: "", rocket: ""))
+        InformationView(launch: LaunchModel(id: "", name: "Unknown", flight_number: 1, date_utc: "", success: false, links: nil, details: "", rocket: ""), launcheImage: Data())
             .previewLayout(.sizeThatFits)
             .environmentObject(ContentVM())
     }

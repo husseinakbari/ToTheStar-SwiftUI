@@ -126,4 +126,35 @@ final class Network {
                 }
             }
     }
+    // MARK: - Past Launche Request
+    static func getPastLaunches(completion: @escaping ([LaunchModel]?, ErrorTypes) -> ()) {
+        AF.request(URLs.pastLaunche, method: .get)
+            .validate()
+            .responseJSON { response in
+                switch response.result {
+                case .success:
+                    
+                    guard let data = response.data else {
+                        completion(nil, .network)
+                        return
+                    }
+                    
+                    do {
+                        var dataDecoded = try JSONDecoder().decode([LaunchModel].self, from: data)
+                        // FIX: - API bugs
+                        dataDecoded = dataDecoded.reversed()
+                        //
+                        completion(dataDecoded, .none)
+                        
+                    } catch let error {
+                        completion(nil, .network)
+                        print("❌ \(error)")
+                    }
+                    
+                case let .failure(error):
+                    completion(nil, .network)
+                    print("❌ \(error)")
+                }
+            }
+    }
 }

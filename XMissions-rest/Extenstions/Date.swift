@@ -8,12 +8,12 @@
 import Foundation
 
 extension Date {
-    static func dateFormatter(time: String) -> String {
+    static func dateFormatter(time: String, getFormate: String? = "yyyy-MM-dd'T'HH:mm:ss.SSSZ", printFormate: String? = "MMM dd,yyyy HH:mm") -> String {
         let dateFormatterGet = DateFormatter()
-        dateFormatterGet.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+        dateFormatterGet.dateFormat = getFormate
         
         let dateFormatterPrint = DateFormatter()
-        dateFormatterPrint.dateFormat = "MMM dd,yyyy HH:mm"
+        dateFormatterPrint.dateFormat = printFormate
         
         if let date = dateFormatterGet.date(from: time) {
             return dateFormatterPrint.string(from: date)

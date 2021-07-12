@@ -1,18 +1,18 @@
 //
-//  UpcomingLaunchesList.swift
+//  PastList.swift
 //  XMissions-rest
 //
-//  Created by Hossein Akbari on 4/9/1400 AP.
+//  Created by Hossein Akbari on 4/18/1400 AP.
 //
 
 import SwiftUI
 
-struct UpcomingList: View {
+struct PastList: View {
     @EnvironmentObject var contentVM: ContentVM
     
     init() {
         UITableView.appearance().backgroundColor = .clear
-        print("Init Upcomig List")
+        print("Init Past List")
     }
     
     var body: some View {
@@ -31,7 +31,7 @@ struct UpcomingList: View {
                         .listRowInsets(EdgeInsets())
                         .frame(height: 60)
                         
-                    } else if let (launches, images) = contentVM.upcomingMisisons {
+                    } else if let (launches, images) = contentVM.pastLaunches {
                         
                         ForEach(launches) { launch in
                             let launchImage = images[launch.id] ?? Data()
@@ -46,14 +46,14 @@ struct UpcomingList: View {
                     }
                 }
             }
-            .navigationBarTitle("Upcoming")
+            .navigationTitle("Latest")
         }
     }
 }
 
-struct UpcomingList_Previews: PreviewProvider {
+struct PastList_Previews: PreviewProvider {
     static var previews: some View {
-        UpcomingList()
+        PastList()
             .environmentObject(ContentVM())
     }
 }

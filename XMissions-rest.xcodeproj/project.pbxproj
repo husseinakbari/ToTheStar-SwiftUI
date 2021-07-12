@@ -18,6 +18,7 @@
 		830DD669268ED4FF000B85C3 /* RowData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830DD668268ED4FF000B85C3 /* RowData.swift */; };
 		830DD66B268EE8EC000B85C3 /* Numeric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830DD66A268EE8EC000B85C3 /* Numeric.swift */; };
 		8326C5DA26982F36003A52DF /* LauncheDesc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8326C5D926982F36003A52DF /* LauncheDesc.swift */; };
+		8326C5DC26985B51003A52DF /* PastList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8326C5DB26985B51003A52DF /* PastList.swift */; };
 		837015982690711C0088542A /* RocketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837015972690711C0088542A /* RocketView.swift */; };
 		83DFAE142690E81800EDD77C /* Engines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DFAE132690E81800EDD77C /* Engines.swift */; };
 		83DFAE162690EBDA00EDD77C /* Stages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DFAE152690EBDA00EDD77C /* Stages.swift */; };
@@ -58,6 +59,7 @@
 		830DD668268ED4FF000B85C3 /* RowData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowData.swift; sourceTree = "<group>"; };
 		830DD66A268EE8EC000B85C3 /* Numeric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Numeric.swift; sourceTree = "<group>"; };
 		8326C5D926982F36003A52DF /* LauncheDesc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LauncheDesc.swift; sourceTree = "<group>"; };
+		8326C5DB26985B51003A52DF /* PastList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastList.swift; sourceTree = "<group>"; };
 		837015972690711C0088542A /* RocketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketView.swift; sourceTree = "<group>"; };
 		83DFAE132690E81800EDD77C /* Engines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Engines.swift; sourceTree = "<group>"; };
 		83DFAE152690EBDA00EDD77C /* Stages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stages.swift; sourceTree = "<group>"; };
@@ -255,6 +257,7 @@
 			children = (
 				83EFEDEF268C469F001031FE /* UpcomingList.swift */,
 				83EFEDF1268C4A32001031FE /* MissionCell.swift */,
+				8326C5DB26985B51003A52DF /* PastList.swift */,
 				830DD659268DFB31000B85C3 /* MissionDetails */,
 				83DFAE122690E7F700EDD77C /* RocketView */,
 			);
@@ -414,6 +417,7 @@
 				83EFEDB626888505001031FE /* Network.swift in Sources */,
 				83EFEDC92688D402001031FE /* TabBarView.swift in Sources */,
 				83EFEDF6268C5C94001031FE /* MissionDetails.swift in Sources */,
+				8326C5DC26985B51003A52DF /* PastList.swift in Sources */,
 				83EFEDF2268C4A32001031FE /* MissionCell.swift in Sources */,
 				83EFEDA02687A0CA001031FE /* XMissions_restApp.swift in Sources */,
 			);

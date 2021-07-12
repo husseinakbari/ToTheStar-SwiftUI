@@ -10,17 +10,19 @@ import SwiftUI
 struct MissionCell: View {
     @EnvironmentObject var contentVM: ContentVM
     
-    let mission: LaunchModel
+    let launch: LaunchModel
+    let launchImage: Data
     
-    init(mission: LaunchModel) {
-        self.mission = mission
+    init(launch: LaunchModel, launchImage: Data) {
+        self.launch = launch
+        self.launchImage = launchImage
     }
     
     var body: some View {
         HStack {
         
-            if let image = contentVM.upcomingMisisons.1[mission.id] {
-                Image(uiImage: UIImage(data: image)!)
+            if !launchImage.isEmpty {
+                Image(uiImage: UIImage(data: launchImage)!)
                     .resizable()
                     .frame(width: 40, height: 40, alignment: .center)
                     .foregroundColor(.black)
@@ -39,11 +41,11 @@ struct MissionCell: View {
 
             
             VStack(alignment: .leading, spacing: 5) {
-                Text(mission.name ?? "")
+                Text(launch.name ?? "")
                     .foregroundColor(Color.white)
                     .font(.system(size: 16, weight: .bold, design: .rounded))
 
-                if let launchDate = mission.date_utc {
+                if let launchDate = launch.date_utc {
                     Text(Date.dateFormatter(time: launchDate))
                         .foregroundColor(Color("light-gray"))
                         .font(.system(size: 14, weight: .medium, design: .rounded))
@@ -55,7 +57,7 @@ struct MissionCell: View {
 
 struct MissionCell_Previews: PreviewProvider {
     static var previews: some View {
-        MissionCell(mission: LaunchModel(id: "1", name: "Misison name", flight_number: 1, date_utc: "", success: false, links: nil, details: "details", rocket: ""))
+        MissionCell(launch: LaunchModel(id: "1", name: "Misison name", flight_number: 1, date_utc: "", success: false, links: nil, details: "details", rocket: ""), launchImage: Data())
             .environmentObject(ContentVM())
             .previewLayout(.sizeThatFits)
     }

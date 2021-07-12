@@ -9,10 +9,12 @@ import SwiftUI
 
 struct MissionDetails: View {
     @ObservedObject var launchesVM: LaunchesViewModel
-    let mission: LaunchModel
+    let launch: LaunchModel
+    let launcheImage: Data
     
-    init(mission: LaunchModel) {
-        self.mission = mission
+    init(launch: LaunchModel, launchImage: Data) {
+        self.launch = launch
+        self.launcheImage = launchImage
         self.launchesVM = LaunchesViewModel()
     }
     
@@ -25,9 +27,9 @@ struct MissionDetails: View {
                 ImageSliderView(images: Tools.missionsImages())
                 
                 VStack(spacing: 20) {
-                    InformationView(mission: mission)
+                    InformationView(launch: launch, launcheImage: launcheImage)
                     
-                    LauncheDesc(launch: mission)
+                    LauncheDesc(launch: launch)
                     
                     if launchesVM.isLoading {
                         RocketInfo(rocket: nil)
@@ -40,10 +42,10 @@ struct MissionDetails: View {
                 
                 Spacer()
             }
-            .navigationBarTitle(mission.name ?? "Unkonwn")
+            .navigationBarTitle(launch.name ?? "Unkonwn")
             .navigationBarTitleDisplayMode(.inline)
         }.onAppear {
-            self.launchesVM.getRocketData(rocketID: mission.rocket)
+            self.launchesVM.getRocketData(rocketID: launch.rocket)
         }
     }
 }
@@ -52,7 +54,7 @@ struct MissionDetails: View {
 
 struct MissionDetails_Previews: PreviewProvider {
     static var previews: some View {
-        MissionDetails(mission: LaunchModel(id: "", name: "Mission name", flight_number: 1, date_utc: "", success: false, links: nil, details: "", rocket: ""))
+        MissionDetails(launch: LaunchModel(id: "", name: "Mission name", flight_number: 1, date_utc: "", success: false, links: nil, details: "", rocket: ""), launchImage: Data())
             .environmentObject(ContentVM())
     }
 }
