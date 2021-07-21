@@ -33,9 +33,15 @@ struct MissionDetails: View {
                     
                     if launchesVM.isLoading {
                         RocketInfo(rocket: nil)
+                        Launchpad(launchpad: nil)
                     } else if let rocket = launchesVM.rocket {
                         RocketInfo(rocket: rocket)
                     }
+                    
+                    if let launchpad = launchesVM.launchpad {
+                        Launchpad(launchpad: launchpad)
+                    }
+
                     
                 }
                 .padding(.all, 15)
@@ -46,6 +52,9 @@ struct MissionDetails: View {
             .navigationBarTitleDisplayMode(.inline)
         }.onAppear {
             self.launchesVM.getRocketData(rocketID: launch.rocket)
+            if let launchpadID = launch.launchpad {
+                self.launchesVM.getLaunchpadData(launchpadID: launchpadID)
+            }
         }
     }
 }
@@ -54,7 +63,7 @@ struct MissionDetails: View {
 
 struct MissionDetails_Previews: PreviewProvider {
     static var previews: some View {
-        MissionDetails(launch: LaunchModel(id: "", name: "Mission name", flight_number: 1, date_utc: "", success: false, links: nil, details: "", rocket: ""), launchImage: Data())
+        MissionDetails(launch: LaunchModel(id: "", name: "Mission name", flight_number: 1, date_utc: "", success: false, links: nil, details: "", rocket: "", launchpad: ""), launchImage: Data())
             .environmentObject(ContentVM())
     }
 }

@@ -67,7 +67,7 @@ struct InformationView: View {
 
 struct InformationView_Previews: PreviewProvider {
     static var previews: some View {
-        InformationView(launch: LaunchModel(id: "", name: "Unknown", flight_number: 1, date_utc: "", success: false, links: nil, details: "", rocket: ""), launcheImage: Data())
+        InformationView(launch: LaunchModel(id: "", name: "Unknown", flight_number: 1, date_utc: "", success: false, links: nil, details: "", rocket: "", launchpad: ""), launcheImage: Data())
             .previewLayout(.sizeThatFits)
             .environmentObject(ContentVM())
     }

@@ -19,7 +19,11 @@
 		830DD66B268EE8EC000B85C3 /* Numeric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830DD66A268EE8EC000B85C3 /* Numeric.swift */; };
 		8326C5DA26982F36003A52DF /* LauncheDesc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8326C5D926982F36003A52DF /* LauncheDesc.swift */; };
 		8326C5DC26985B51003A52DF /* PastList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8326C5DB26985B51003A52DF /* PastList.swift */; };
+		8326C5DE269C8FCF003A52DF /* Launchpad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8326C5DD269C8FCF003A52DF /* Launchpad.swift */; };
+		8326C5E1269C9199003A52DF /* LaunchpadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8326C5E0269C9199003A52DF /* LaunchpadView.swift */; };
+		8326C5E326A348C0003A52DF /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8326C5E226A348C0003A52DF /* MapView.swift */; };
 		837015982690711C0088542A /* RocketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837015972690711C0088542A /* RocketView.swift */; };
+		83B9816C26A869E40040759E /* LoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B9816B26A869E40040759E /* LoadingIndicator.swift */; };
 		83DFAE142690E81800EDD77C /* Engines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DFAE132690E81800EDD77C /* Engines.swift */; };
 		83DFAE162690EBDA00EDD77C /* Stages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DFAE152690EBDA00EDD77C /* Stages.swift */; };
 		83DFAE182690EC2900EDD77C /* Specifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DFAE172690EC2900EDD77C /* Specifications.swift */; };
@@ -60,7 +64,11 @@
 		830DD66A268EE8EC000B85C3 /* Numeric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Numeric.swift; sourceTree = "<group>"; };
 		8326C5D926982F36003A52DF /* LauncheDesc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LauncheDesc.swift; sourceTree = "<group>"; };
 		8326C5DB26985B51003A52DF /* PastList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastList.swift; sourceTree = "<group>"; };
+		8326C5DD269C8FCF003A52DF /* Launchpad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Launchpad.swift; sourceTree = "<group>"; };
+		8326C5E0269C9199003A52DF /* LaunchpadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchpadView.swift; sourceTree = "<group>"; };
+		8326C5E226A348C0003A52DF /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		837015972690711C0088542A /* RocketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketView.swift; sourceTree = "<group>"; };
+		83B9816B26A869E40040759E /* LoadingIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicator.swift; sourceTree = "<group>"; };
 		83DFAE132690E81800EDD77C /* Engines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Engines.swift; sourceTree = "<group>"; };
 		83DFAE152690EBDA00EDD77C /* Stages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stages.swift; sourceTree = "<group>"; };
 		83DFAE172690EC2900EDD77C /* Specifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Specifications.swift; sourceTree = "<group>"; };
@@ -121,8 +129,17 @@
 				830DD65E268DFC43000B85C3 /* Information.swift */,
 				830DD666268ED464000B85C3 /* RocketInfo.swift */,
 				8326C5D926982F36003A52DF /* LauncheDesc.swift */,
+				8326C5DD269C8FCF003A52DF /* Launchpad.swift */,
 			);
 			path = MissionDetails;
+			sourceTree = "<group>";
+		};
+		8326C5DF269C917E003A52DF /* LaunchpadView */ = {
+			isa = PBXGroup;
+			children = (
+				8326C5E0269C9199003A52DF /* LaunchpadView.swift */,
+			);
+			path = LaunchpadView;
 			sourceTree = "<group>";
 		};
 		83DFAE122690E7F700EDD77C /* RocketView */ = {
@@ -217,6 +234,8 @@
 				830DD660268E0B6A000B85C3 /* LabelDivider.swift */,
 				830DD664268ED162000B85C3 /* HeaderLabel.swift */,
 				830DD668268ED4FF000B85C3 /* RowData.swift */,
+				8326C5E226A348C0003A52DF /* MapView.swift */,
+				83B9816B26A869E40040759E /* LoadingIndicator.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -260,6 +279,7 @@
 				8326C5DB26985B51003A52DF /* PastList.swift */,
 				830DD659268DFB31000B85C3 /* MissionDetails */,
 				83DFAE122690E7F700EDD77C /* RocketView */,
+				8326C5DF269C917E003A52DF /* LaunchpadView */,
 			);
 			path = Launches;
 			sourceTree = "<group>";
@@ -388,6 +408,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83B9816C26A869E40040759E /* LoadingIndicator.swift in Sources */,
 				83EFEDF0268C469F001031FE /* UpcomingList.swift in Sources */,
 				83EFEDED268A4367001031FE /* Font.swift in Sources */,
 				83EFEDBA26888A2A001031FE /* NetworkModel.swift in Sources */,
@@ -398,6 +419,7 @@
 				830DD65B268DFB59000B85C3 /* ImageSlider.swift in Sources */,
 				830DD658268DE8DA000B85C3 /* View.swift in Sources */,
 				830DD663268E2CFE000B85C3 /* LaunchesVM.swift in Sources */,
+				8326C5E326A348C0003A52DF /* MapView.swift in Sources */,
 				8326C5DA26982F36003A52DF /* LauncheDesc.swift in Sources */,
 				83EFEDF4268C4B73001031FE /* Date.swift in Sources */,
 				83EFEDB32687A7CF001031FE /* ContentVM.swift in Sources */,
@@ -412,12 +434,14 @@
 				83EFEDA22687A0CA001031FE /* ContentView.swift in Sources */,
 				830DD661268E0B6A000B85C3 /* LabelDivider.swift in Sources */,
 				83EFEDC72688D2FA001031FE /* Tools.swift in Sources */,
+				8326C5DE269C8FCF003A52DF /* Launchpad.swift in Sources */,
 				830DD65F268DFC43000B85C3 /* Information.swift in Sources */,
 				83DFAE162690EBDA00EDD77C /* Stages.swift in Sources */,
 				83EFEDB626888505001031FE /* Network.swift in Sources */,
 				83EFEDC92688D402001031FE /* TabBarView.swift in Sources */,
 				83EFEDF6268C5C94001031FE /* MissionDetails.swift in Sources */,
 				8326C5DC26985B51003A52DF /* PastList.swift in Sources */,
+				8326C5E1269C9199003A52DF /* LaunchpadView.swift in Sources */,
 				83EFEDF2268C4A32001031FE /* MissionCell.swift in Sources */,
 				83EFEDA02687A0CA001031FE /* XMissions_restApp.swift in Sources */,
 			);
@@ -561,7 +585,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "mariorover.com.XMissions-rest";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -584,7 +608,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "mariorover.com.XMissions-rest";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -55,7 +55,7 @@ struct LauncheDesc: View {
 
 struct LauncheDesc_Previews: PreviewProvider {
     static var previews: some View {
-        LauncheDesc(launch: LaunchModel(id: "", name: "name", flight_number: 123, date_utc: "", success: nil, links: LauncheLinkModel(presskit: "https://www.nasa.gov/pdf/694166main_SpaceXCRS-1PressKit.pdf", patch: nil, reddit: nil, webcast: "https://www.youtube.com/watch?v=0a_00nJ_Y88", article: "https://www.space.com/2196-spacex-inaugural-falcon-1-rocket-lost-launch.html", wikipedia: "https://en.wikipedia.org/wiki/DemoSat"), details: "SpaceX's primary west coast launch pad for polar orbits and sun-synchronous orbits,", rocket: ""))
+        LauncheDesc(launch: LaunchModel(id: "", name: "name", flight_number: 123, date_utc: "", success: nil, links: LauncheLinkModel(presskit: "https://www.nasa.gov/pdf/694166main_SpaceXCRS-1PressKit.pdf", patch: nil, reddit: nil, webcast: "https://www.youtube.com/watch?v=0a_00nJ_Y88", article: "https://www.space.com/2196-spacex-inaugural-falcon-1-rocket-lost-launch.html", wikipedia: "https://en.wikipedia.org/wiki/DemoSat"), details: "SpaceX's primary west coast launch pad for polar orbits and sun-synchronous orbits,", rocket: "", launchpad: ""))
             .previewLayout(.sizeThatFits)
     }
 }

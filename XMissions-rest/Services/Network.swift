@@ -157,4 +157,45 @@ final class Network {
                 }
             }
     }
+    // MARK: - Rockets Request
+    static func getLaunchpads(id: String? = nil ,completion: @escaping ([LaunchpadModel]?, ErrorTypes) -> ()) {
+        var url = URLs.launchpads
+        var launchpads = [LaunchpadModel]()
+        
+        if let launchpadID = id {
+            url += "/\(launchpadID)"
+        }
+
+        AF.request(url, method: .get)
+            .validate()
+            .responseJSON { response in
+                switch response.result {
+                case .success:
+
+                    guard let data = response.data else {
+                        completion(nil, .network)
+                        return
+                    }
+                    
+                    do {
+                        if id != nil {
+                            let result = try JSONDecoder().decode(LaunchpadModel.self, from: data)
+                            launchpads.append(result)
+                        } else {
+                            launchpads = try JSONDecoder().decode([LaunchpadModel].self, from: data)
+                        }
+                        
+                        completion(launchpads, .none)
+
+                    } catch let error {
+                        completion(nil, .network)
+                        print("❌ \(error)")
+                    }
+
+                case let .failure(error):
+                    completion(nil, .network)
+                    print("❌ \(error)")
+                }
+            }
+    }
 }

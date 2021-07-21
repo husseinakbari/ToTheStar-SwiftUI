@@ -57,7 +57,7 @@ struct MissionCell: View {
 
 struct MissionCell_Previews: PreviewProvider {
     static var previews: some View {
-        MissionCell(launch: LaunchModel(id: "1", name: "Misison name", flight_number: 1, date_utc: "", success: false, links: nil, details: "details", rocket: ""), launchImage: Data())
+        MissionCell(launch: LaunchModel(id: "1", name: "Misison name", flight_number: 1, date_utc: "", success: false, links: nil, details: "details", rocket: "", launchpad: ""), launchImage: Data())
             .environmentObject(ContentVM())
             .previewLayout(.sizeThatFits)
     }

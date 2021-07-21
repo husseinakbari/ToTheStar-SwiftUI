@@ -16,6 +16,7 @@ struct RowData: View {
         case bool
         case string
         case link
+        case multiline
     }
     
     init(rowType: RowType = .string , label: String, value: String) {
@@ -70,15 +71,28 @@ struct RowData: View {
     
     
     var body: some View {
-        HStack {
-            Text(self.label)
-                .foregroundColor(.white)
-                .font(.system(size: 14, weight: .semibold, design: .rounded))
-            
-            Spacer()
-            
-            
-            rowDataView()
+        
+        if rowType == .multiline {
+            VStack(alignment: .leading, spacing: 5) {
+                Text(self.label)
+                    .foregroundColor(.white)
+                    .font(.system(size: 14, weight: .semibold, design: .rounded))
+                
+                rowDataView()
+            }
+        } else {
+            HStack {
+                Text(self.label)
+                    .foregroundColor(.white)
+                    .font(.system(size: 14, weight: .semibold, design: .rounded))
+                
+                Spacer()
+                
+                
+                rowDataView()
+            }
         }
+        
+        
     }
 }

@@ -12,6 +12,8 @@ final class LaunchesViewModel: ObservableObject {
     @Published var isLoading: Bool = false
     @Published var rocket: RocketModel?
     @Published var flickerImages = [Data]()
+    @Published var launchpad: LaunchpadModel?
+    @Published var launchpadImage: Data?
     
     func getRocketData(rocketID: String? = nil) {
         self.isLoading.toggle()
@@ -38,6 +40,27 @@ final class LaunchesViewModel: ObservableObject {
                     }
                 }
             }
+        }
+    }
+    
+    func getLaunchpadData(launchpadID: String? = nil) {
+        
+        Network.getLaunchpads(id: launchpadID) { launchpads, error in
+            if let launchpads = launchpads, error == .none {
+                
+                let launchpad = launchpads.first
+                self.launchpad = launchpad
+            }
+        }
+    }
+    
+    func getLaunchpadImage(url: String) {
+        self.isLoading = true
+        Network.fetchData(from: url) { data, error in
+            if let data = data, error == .none {
+                self.launchpadImage = data
+            }
+            self.isLoading = false
         }
     }
 }

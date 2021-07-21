@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct CustomAlertModel {
     var show: Bool
@@ -26,4 +27,14 @@ enum TabItemsTag {
     case upcoming
     case company
     case past
+}
+
+struct Coordinate: Identifiable {
+    let id = UUID()
+    let latitude: CLLocationDegrees
+    let longitude: CLLocationDegrees
+    let tint: Color
+    var coordinate: CLLocationCoordinate2D {
+        CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+    }
 }

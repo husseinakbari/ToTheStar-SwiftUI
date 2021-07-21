@@ -23,7 +23,7 @@ struct UpcomingList: View {
                 List {
                     if contentVM.isLoading {
                         ForEach(1..<10) { _ in
-                            MissionCell(launch: LaunchModel(id: "", name: "###################", flight_number: 111, date_utc: "2020-11-21T17:17:00.000Z", success: false, links: nil, details: "", rocket: ""), launchImage: Data())
+                            MissionCell(launch: LaunchModel(id: "", name: "###################", flight_number: 111, date_utc: "2020-11-21T17:17:00.000Z", success: false, links: nil, details: "", rocket: "", launchpad: ""), launchImage: Data())
                                 .listRowBackground(Color("navy-blue"))
                                 .redacted(reason: .placeholder)
                             

@@ -48,6 +48,7 @@ struct LaunchModel: Codable, Identifiable {
     let links: LauncheLinkModel?
     let details: String?
     let rocket: String?
+    let launchpad: String?
 }
 
 struct LauncheLinkModel: Codable {
@@ -148,4 +149,24 @@ struct LongModel: Codable {
 struct WeightModel: Codable {
     let kg: Double?
     let lb: Double?
+}
+// MARK: - Launchpad Response
+struct LaunchpadModel: Codable {
+    let id: String?
+    let name: String?
+    let full_name: String?
+    let locality: String?
+    let latitude: Double?
+    let longitude: Double?
+    let launch_attempts: Int?
+    let launch_successes: Int?
+    let rockets: [String]?
+    let launches: [String]?
+    let details: String?
+    let status: String?
+    let images: LaunchpadImagesModel?
+}
+
+struct LaunchpadImagesModel: Codable {
+    let large: [String]?
 }
