@@ -41,9 +41,6 @@
 		83EFEDC92688D402001031FE /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EFEDC82688D402001031FE /* TabBarView.swift */; };
 		83EFEDCB2688D45F001031FE /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EFEDCA2688D45F001031FE /* HomeView.swift */; };
 		83EFEDCD2688D46E001031FE /* CompanyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EFEDCC2688D46E001031FE /* CompanyView.swift */; };
-		83EFEDE7268A337D001031FE /* IRANYekanMobileRegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 83EFEDE4268A337D001031FE /* IRANYekanMobileRegular.ttf */; };
-		83EFEDE8268A337D001031FE /* IRANYekanMobileLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 83EFEDE5268A337D001031FE /* IRANYekanMobileLight.ttf */; };
-		83EFEDE9268A337D001031FE /* IRANYekanMobileBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 83EFEDE6268A337D001031FE /* IRANYekanMobileBold.ttf */; };
 		83EFEDED268A4367001031FE /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EFEDEC268A4367001031FE /* Font.swift */; };
 		83EFEDF0268C469F001031FE /* UpcomingList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EFEDEF268C469F001031FE /* UpcomingList.swift */; };
 		83EFEDF2268C4A32001031FE /* MissionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EFEDF1268C4A32001031FE /* MissionCell.swift */; };
@@ -88,9 +85,6 @@
 		83EFEDC82688D402001031FE /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		83EFEDCA2688D45F001031FE /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		83EFEDCC2688D46E001031FE /* CompanyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyView.swift; sourceTree = "<group>"; };
-		83EFEDE4268A337D001031FE /* IRANYekanMobileRegular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANYekanMobileRegular.ttf; sourceTree = "<group>"; };
-		83EFEDE5268A337D001031FE /* IRANYekanMobileLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANYekanMobileLight.ttf; sourceTree = "<group>"; };
-		83EFEDE6268A337D001031FE /* IRANYekanMobileBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANYekanMobileBold.ttf; sourceTree = "<group>"; };
 		83EFEDEC268A4367001031FE /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		83EFEDEF268C469F001031FE /* UpcomingList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingList.swift; sourceTree = "<group>"; };
 		83EFEDF1268C4A32001031FE /* MissionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionCell.swift; sourceTree = "<group>"; };
@@ -181,7 +175,6 @@
 				83EFEDB02687A6BF001031FE /* View Models */,
 				83EFEDAF2687A6A2001031FE /* Models */,
 				83EFEDC52688D2D8001031FE /* Extenstions */,
-				83EFEDDD268A3156001031FE /* Fonts */,
 				83EFEDA32687A0CC001031FE /* Assets.xcassets */,
 				83EFEDA82687A0CC001031FE /* Info.plist */,
 				83EFEDA52687A0CC001031FE /* Preview Content */,
@@ -259,16 +252,6 @@
 				830DD66A268EE8EC000B85C3 /* Numeric.swift */,
 			);
 			path = Extenstions;
-			sourceTree = "<group>";
-		};
-		83EFEDDD268A3156001031FE /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-				83EFEDE6268A337D001031FE /* IRANYekanMobileBold.ttf */,
-				83EFEDE5268A337D001031FE /* IRANYekanMobileLight.ttf */,
-				83EFEDE4268A337D001031FE /* IRANYekanMobileRegular.ttf */,
-			);
-			path = Fonts;
 			sourceTree = "<group>";
 		};
 		83EFEDEE268C466B001031FE /* Launches */ = {
@@ -351,10 +334,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83EFEDE7268A337D001031FE /* IRANYekanMobileRegular.ttf in Resources */,
 				83EFEDA72687A0CC001031FE /* Preview Assets.xcassets in Resources */,
-				83EFEDE9268A337D001031FE /* IRANYekanMobileBold.ttf in Resources */,
-				83EFEDE8268A337D001031FE /* IRANYekanMobileLight.ttf in Resources */,
 				83EFEDA42687A0CC001031FE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

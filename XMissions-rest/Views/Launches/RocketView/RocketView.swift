@@ -35,7 +35,7 @@ struct RocketView: View {
                     if rocket.flickr_images?.count == launchVM.flickerImages.count {
                         ImageSliderView2(images: self.launchVM.flickerImages)
                     } else {
-                        ImageSliderView2(images: [], loading: true)
+                        LoadingIndicator()
                     }
                     
                     

@@ -21,22 +21,19 @@ struct MissionCell: View {
     var body: some View {
         HStack {
         
-            if !launchImage.isEmpty {
-                Image(uiImage: UIImage(data: launchImage)!)
-                    .resizable()
-                    .frame(width: 40, height: 40, alignment: .center)
-                    .foregroundColor(.black)
-            } else {
-                VStack(alignment: .center) {
-                    Image("rocket")
+            VStack {
+                if !launchImage.isEmpty {
+                    Image(uiImage: UIImage(data: launchImage)!)
                         .resizable()
-                        .frame(width: 25, height: 25, alignment: .center)
-                        .foregroundColor(Color("dark-gray"))
+                        .frame(width: 40, height: 40, alignment: .center)
+                        .foregroundColor(.black)
+                } else {
+                    VStack {}
+                    .frame(width: 40, height: 40, alignment: .center)
+                    .background(Color("light-gray"))
+                    .cornerRadius(50)
                 }
-                .frame(width: 40, height: 40, alignment: .center)
-                .background(Color("light-gray"))
-                .cornerRadius(50)
-            }
+            }.padding(.trailing, 5)
             
 
             

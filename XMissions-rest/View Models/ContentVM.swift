@@ -46,15 +46,15 @@ final class ContentVM: ObservableObject {
                 
                 self.upcomingMisisons.0 = missions
                 
-//                for mission in missions {
-//                    if let URLPatch = mission.links?.patch?.small {
-//                        Network.fetchData(from: URLPatch) { data, error in
-//                            if let imageData = data, error == .none {
-//                                self.upcomingMisisons.1[mission.id] = imageData
-//                            }
-//                        }
-//                    }
-//                }
+                for mission in missions {
+                    if let URLPatch = mission.links?.patch?.small {
+                        Network.fetchData(from: URLPatch) { data, error in
+                            if let imageData = data, error == .none {
+                                self.upcomingMisisons.1[mission.id] = imageData
+                            }
+                        }
+                    }
+                }
                 
                 self.isLoading.toggle()
             } else if error == .network {
