@@ -27,7 +27,7 @@ struct ImageSliderView: View {
             }
         }
         .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
-        .frame(width: UIScreen.main.bounds.width, height: 260)
+        .frame(height: 260)
         .onReceive(timer, perform: { _ in
             withAnimation {
                 selection = selection < images.count ? selection + 1 : 0

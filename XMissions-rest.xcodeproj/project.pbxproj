@@ -136,6 +136,14 @@
 			path = LaunchpadView;
 			sourceTree = "<group>";
 		};
+		83B9816D26AA87CD0040759E /* Company */ = {
+			isa = PBXGroup;
+			children = (
+				83EFEDCC2688D46E001031FE /* CompanyView.swift */,
+			);
+			path = Company;
+			sourceTree = "<group>";
+		};
 		83DFAE122690E7F700EDD77C /* RocketView */ = {
 			isa = PBXGroup;
 			children = (
@@ -195,7 +203,7 @@
 			children = (
 				83EFEDA12687A0CA001031FE /* ContentView.swift */,
 				83EFEDCA2688D45F001031FE /* HomeView.swift */,
-				83EFEDCC2688D46E001031FE /* CompanyView.swift */,
+				83B9816D26AA87CD0040759E /* Company */,
 				83EFEDEE268C466B001031FE /* Launches */,
 				83EFEDB12687A77F001031FE /* Components */,
 			);

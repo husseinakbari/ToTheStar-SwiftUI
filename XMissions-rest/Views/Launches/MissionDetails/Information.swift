@@ -26,12 +26,7 @@ struct InformationView: View {
                             .frame(width: frameSize, height: frameSize, alignment: .center)
                             .foregroundColor(.black)
                     } else {
-                        VStack(alignment: .center) {
-                            Image("rocket")
-                                .resizable()
-                                .frame(width: 35, height: 35, alignment: .center)
-                                .foregroundColor(Color("dark-gray"))
-                        }
+                        VStack {}
                         .frame(width: frameSize, height: frameSize, alignment: .center)
                         .background(Color("light-gray"))
                         .cornerRadius(50)

@@ -20,6 +20,7 @@ final class ContentVM: ObservableObject {
     init() {
         getUpcomingData()
         getPastLaunchData()
+        getCompanyData()
     }
     
     private func getCompanyData() {
@@ -38,7 +39,7 @@ final class ContentVM: ObservableObject {
         }
     }
     
-    func getUpcomingData() {
+    private func getUpcomingData() {
         self.isLoading.toggle()
         print("❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️")
         Network.getUpcomingLaunches { missions, error in
@@ -69,7 +70,7 @@ final class ContentVM: ObservableObject {
         }
     }
     
-    func getPastLaunchData() {
+    private func getPastLaunchData() {
         self.isLoading.toggle()
         print("🏀🏀🏀🏀🏀🏀")
         Network.getPastLaunches { launches, error in
