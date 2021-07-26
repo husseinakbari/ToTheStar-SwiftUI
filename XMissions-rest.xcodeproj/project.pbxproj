@@ -23,6 +23,7 @@
 		8326C5E1269C9199003A52DF /* LaunchpadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8326C5E0269C9199003A52DF /* LaunchpadView.swift */; };
 		8326C5E326A348C0003A52DF /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8326C5E226A348C0003A52DF /* MapView.swift */; };
 		837015982690711C0088542A /* RocketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837015972690711C0088542A /* RocketView.swift */; };
+		83A9584026ADDE9700360C79 /* NextLaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A9583F26ADDE9700360C79 /* NextLaunchView.swift */; };
 		83B9816C26A869E40040759E /* LoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B9816B26A869E40040759E /* LoadingIndicator.swift */; };
 		83DFAE142690E81800EDD77C /* Engines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DFAE132690E81800EDD77C /* Engines.swift */; };
 		83DFAE162690EBDA00EDD77C /* Stages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DFAE152690EBDA00EDD77C /* Stages.swift */; };
@@ -65,6 +66,7 @@
 		8326C5E0269C9199003A52DF /* LaunchpadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchpadView.swift; sourceTree = "<group>"; };
 		8326C5E226A348C0003A52DF /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		837015972690711C0088542A /* RocketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketView.swift; sourceTree = "<group>"; };
+		83A9583F26ADDE9700360C79 /* NextLaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextLaunchView.swift; sourceTree = "<group>"; };
 		83B9816B26A869E40040759E /* LoadingIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicator.swift; sourceTree = "<group>"; };
 		83DFAE132690E81800EDD77C /* Engines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Engines.swift; sourceTree = "<group>"; };
 		83DFAE152690EBDA00EDD77C /* Stages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stages.swift; sourceTree = "<group>"; };
@@ -237,6 +239,7 @@
 				830DD668268ED4FF000B85C3 /* RowData.swift */,
 				8326C5E226A348C0003A52DF /* MapView.swift */,
 				83B9816B26A869E40040759E /* LoadingIndicator.swift */,
+				83A9583F26ADDE9700360C79 /* NextLaunchView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -407,6 +410,7 @@
 				830DD65B268DFB59000B85C3 /* ImageSlider.swift in Sources */,
 				830DD658268DE8DA000B85C3 /* View.swift in Sources */,
 				830DD663268E2CFE000B85C3 /* LaunchesVM.swift in Sources */,
+				83A9584026ADDE9700360C79 /* NextLaunchView.swift in Sources */,
 				8326C5E326A348C0003A52DF /* MapView.swift in Sources */,
 				8326C5DA26982F36003A52DF /* LauncheDesc.swift in Sources */,
 				83EFEDF4268C4B73001031FE /* Date.swift in Sources */,

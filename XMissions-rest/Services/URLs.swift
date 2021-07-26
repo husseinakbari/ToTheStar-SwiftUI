@@ -15,4 +15,5 @@ struct URLs {
     static let rockets = "\(baseUrl)/rockets"
     static let pastLaunche = "\(baseUrl)/launches/past"
     static let launchpads = "\(baseUrl)/launchpads"
+    static let nextLaunch = "\(baseUrl)/launches/next"
 }

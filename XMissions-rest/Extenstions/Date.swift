@@ -21,4 +21,16 @@ extension Date {
             return ""
         }
     }
+    
+    static func convertStringToDate(time: String, formate: String = "yyyy-MM-dd'T'HH:mm:ss.SSSZ") -> Date {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = formate
+        
+        if let date = dateFormatter.date(from: time) {
+            return date
+        } else {
+            return Date()
+        }
+        
+    }
 }

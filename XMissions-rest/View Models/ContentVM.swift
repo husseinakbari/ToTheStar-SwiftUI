@@ -16,8 +16,10 @@ final class ContentVM: ObservableObject {
     @Published var company: CompanyModel?
     @Published var upcomingMisisons = ([LaunchModel](), [String: Data]())
     @Published var pastLaunches = ([LaunchModel](), [String: Data]())
+    @Published var nextLaunch: LaunchModel?
     
     init() {
+        getNextLaunchData()
         getUpcomingData()
         getPastLaunchData()
         getCompanyData()
@@ -41,7 +43,7 @@ final class ContentVM: ObservableObject {
     
     private func getUpcomingData() {
         self.isLoading.toggle()
-        print("❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️")
+        
         Network.getUpcomingLaunches { missions, error in
             if let missions = missions, error == .none {
                 
@@ -72,7 +74,7 @@ final class ContentVM: ObservableObject {
     
     private func getPastLaunchData() {
         self.isLoading.toggle()
-        print("🏀🏀🏀🏀🏀🏀")
+        
         Network.getPastLaunches { launches, error in
             if let launches = launches, error == .none {
                 
@@ -97,6 +99,19 @@ final class ContentVM: ObservableObject {
                     primaryButton: .destructive(Text("Close")),
                     secondaryButton: .default(Text("Try again"), action: self.getCompanyData)
                 )
+            }
+        }
+
+    }
+    
+    private func getNextLaunchData() {
+        self.isLoading.toggle()
+        
+        Network.getNextLaunche { launch, error in
+            if let launch = launch, error == .none {
+                self.nextLaunch = launch
+            } else if error == .network {
+                
             }
         }
 

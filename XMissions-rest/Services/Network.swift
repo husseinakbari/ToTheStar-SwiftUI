@@ -198,4 +198,32 @@ final class Network {
                 }
             }
     }
+    // MARK: - Next Launch
+    static func getNextLaunche(completion: @escaping (LaunchModel?, ErrorTypes) -> ()) {
+        AF.request(URLs.nextLaunch, method: .get)
+            .validate()
+            .responseJSON { response in
+                switch response.result {
+                case .success:
+                    
+                    guard let data = response.data else {
+                        completion(nil, .network)
+                        return
+                    }
+                    
+                    do {
+                        let dataDecoded = try JSONDecoder().decode(LaunchModel.self, from: data)
+                        completion(dataDecoded, .none)
+                        
+                    } catch let error {
+                        completion(nil, .network)
+                        print("❌ \(error)")
+                    }
+                    
+                case let .failure(error):
+                    completion(nil, .network)
+                    print("❌ \(error)")
+                }
+            }
+    }
 }
