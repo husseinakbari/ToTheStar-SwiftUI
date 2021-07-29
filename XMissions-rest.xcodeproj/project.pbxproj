@@ -17,6 +17,7 @@
 		830DD667268ED464000B85C3 /* RocketInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830DD666268ED464000B85C3 /* RocketInfo.swift */; };
 		830DD669268ED4FF000B85C3 /* RowData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830DD668268ED4FF000B85C3 /* RowData.swift */; };
 		830DD66B268EE8EC000B85C3 /* Numeric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830DD66A268EE8EC000B85C3 /* Numeric.swift */; };
+		831D5B5626B336F000E15A1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 831D5B5526B336F000E15A1C /* LaunchScreen.storyboard */; };
 		8326C5DA26982F36003A52DF /* LauncheDesc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8326C5D926982F36003A52DF /* LauncheDesc.swift */; };
 		8326C5DC26985B51003A52DF /* PastList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8326C5DB26985B51003A52DF /* PastList.swift */; };
 		8326C5DE269C8FCF003A52DF /* Launchpad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8326C5DD269C8FCF003A52DF /* Launchpad.swift */; };
@@ -60,6 +61,7 @@
 		830DD666268ED464000B85C3 /* RocketInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketInfo.swift; sourceTree = "<group>"; };
 		830DD668268ED4FF000B85C3 /* RowData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowData.swift; sourceTree = "<group>"; };
 		830DD66A268EE8EC000B85C3 /* Numeric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Numeric.swift; sourceTree = "<group>"; };
+		831D5B5526B336F000E15A1C /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8326C5D926982F36003A52DF /* LauncheDesc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LauncheDesc.swift; sourceTree = "<group>"; };
 		8326C5DB26985B51003A52DF /* PastList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastList.swift; sourceTree = "<group>"; };
 		8326C5DD269C8FCF003A52DF /* Launchpad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Launchpad.swift; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 				83EFEDA32687A0CC001031FE /* Assets.xcassets */,
 				83EFEDA82687A0CC001031FE /* Info.plist */,
 				83EFEDA52687A0CC001031FE /* Preview Content */,
+				831D5B5526B336F000E15A1C /* LaunchScreen.storyboard */,
 			);
 			path = "XMissions-rest";
 			sourceTree = "<group>";
@@ -345,6 +348,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				831D5B5626B336F000E15A1C /* LaunchScreen.storyboard in Resources */,
 				83EFEDA72687A0CC001031FE /* Preview Assets.xcassets in Resources */,
 				83EFEDA42687A0CC001031FE /* Assets.xcassets in Resources */,
 			);
