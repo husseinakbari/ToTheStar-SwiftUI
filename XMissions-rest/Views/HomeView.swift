@@ -9,22 +9,22 @@ import SwiftUI
 
 struct HomeView: View {
     @EnvironmentObject var contentVM: ContentVM
-    
-    init() {
-        print("Init HOME")
-    }
-    
+    @EnvironmentObject var backgroundVM: BackgroundVM
+        
     var body: some View {
         NavigationView {
             ZStack {
                 Color("navy-blue").edgesIgnoringSafeArea(.all)
                 
                 VStack {
-                    if let nextLaunch = contentVM.nextLaunch {
+                    
+                    if let nextLaunch = backgroundVM.nextLaunch,
+                       let nextLaunchDate = backgroundVM.nextLaunchDate {
+                        
                         NavigationLink(
                             destination: MissionDetails(launch: nextLaunch, launchImage: Data()),
                             label: {
-                                NextLaunchView(launch: nextLaunch)
+                                NextLaunchView(launch: nextLaunch, launchTime: nextLaunchDate)
                             })
                     }
                     
@@ -44,6 +44,7 @@ struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()
             .environmentObject(ContentVM())
+            .environmentObject(BackgroundVM())
             .previewDevice("iPhone 12")
     }
 }

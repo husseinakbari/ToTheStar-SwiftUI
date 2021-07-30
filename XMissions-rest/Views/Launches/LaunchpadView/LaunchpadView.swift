@@ -8,12 +8,11 @@
 import SwiftUI
 
 struct LaunchpadView: View {
+    @EnvironmentObject var contentVM: ContentVM
     let launchpad: LaunchpadModel?
-    @ObservedObject var launchVM: LaunchesViewModel
     
     init(launchpad: LaunchpadModel) {
         self.launchpad = launchpad
-        self.launchVM = LaunchesViewModel()
     }
     
     var body: some View {
@@ -60,9 +59,9 @@ struct LaunchpadView: View {
                                 
                                 if let images = launchpad?.images?.large, images.count > 0 {
                                     VStack(alignment: .center) {
-                                        if self.launchVM.isLoading {
+                                        if self.contentVM.isLoading {
                                             LoadingIndicator(size: 50)
-                                        } else if let launchpadImage = self.launchVM.launchpadImage {
+                                        } else if let launchpadImage = self.contentVM.launchpadImage {
                                             Image(uiImage: UIImage(data: launchpadImage)!)
                                                 .resizable()
                                                 .scaledToFit()
@@ -89,7 +88,7 @@ struct LaunchpadView: View {
         }.onAppear {
             if let images = launchpad?.images?.large, images.count > 0 {
                 if let url = images.first {
-                    self.launchVM.getLaunchpadImage(url: url)
+                    self.contentVM.getLaunchpadImage(url: url)
                 }
                 
             }
@@ -100,5 +99,6 @@ struct LaunchpadView: View {
 struct LaunchpadView_Previews: PreviewProvider {
     static var previews: some View {
         LaunchpadView(launchpad: LaunchpadModel(id: "", name: "Kwajalein Atoll", full_name: "Kwajalein Atoll Omelek Island", locality: "Omelek Island", latitude: 9.0477206, longitude: 167.7431292, launch_attempts: 5, launch_successes: 2, rockets: [], launches: [], details: "SpaceX's original pad, where all of the Falcon 1 flights occurred (from 2006 to 2009).", status: "retired", images: LaunchpadImagesModel(large: ["https://i.imgur.com/GGPgsVs.png"])))
+            .environmentObject(ContentVM())
     }
 }

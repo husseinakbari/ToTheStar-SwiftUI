@@ -8,14 +8,13 @@
 import SwiftUI
 
 struct MissionDetails: View {
-    @ObservedObject var launchesVM: LaunchesViewModel
+    @EnvironmentObject var contentVM: ContentVM
     let launch: LaunchModel
     let launcheImage: Data
     
     init(launch: LaunchModel, launchImage: Data) {
         self.launch = launch
         self.launcheImage = launchImage
-        self.launchesVM = LaunchesViewModel()
     }
     
     var body: some View {
@@ -31,14 +30,11 @@ struct MissionDetails: View {
                     
                     LauncheDesc(launch: launch)
                     
-                    if launchesVM.isLoading {
-                        RocketInfo(rocket: nil)
-                        Launchpad(launchpad: nil)
-                    } else if let rocket = launchesVM.rocket {
+                    if let rocket = contentVM.rocket {
                         RocketInfo(rocket: rocket)
                     }
                     
-                    if let launchpad = launchesVM.launchpad {
+                    if let launchpad = contentVM.launchpad {
                         Launchpad(launchpad: launchpad)
                     }
 
@@ -50,11 +46,20 @@ struct MissionDetails: View {
             }
             .navigationBarTitle(launch.name ?? "Unkonwn")
             .navigationBarTitleDisplayMode(.inline)
-        }.onAppear {
-            self.launchesVM.getRocketData(rocketID: launch.rocket)
-            if let launchpadID = launch.launchpad {
-                self.launchesVM.getLaunchpadData(launchpadID: launchpadID)
+        }
+        .onAppear {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                if let rocketID = launch.rocket {
+                    self.contentVM.getRocketData(rocketID: rocketID)
+                }
+
+                if let launchpadID = launch.launchpad {
+                    self.contentVM.getLaunchpadData(launchpadID: launchpadID)
+                }
             }
+        }
+        .onDisappear {
+            self.contentVM.clearPublishers()
         }
     }
 }

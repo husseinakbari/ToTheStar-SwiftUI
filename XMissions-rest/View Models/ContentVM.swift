@@ -8,18 +8,21 @@
 import SwiftUI
 
 final class ContentVM: ObservableObject {
+    
+    @Published var isLoading: Bool = false
     @Published var tabBarSelection: TabItemsTag = .home
     @Published var customAlert = CustomAlertModel(show: false, title: "", message: "", primaryButton: .default(Text("Got it")), secondaryButton: .default(Text("Got it")))
-    @Published var isLoading: Bool = false
     @Published var downloadedImage: Data?
-    
+  
     @Published var company: CompanyModel?
     @Published var upcomingMisisons = ([LaunchModel](), [String: Data]())
     @Published var pastLaunches = ([LaunchModel](), [String: Data]())
-    @Published var nextLaunch: LaunchModel?
-    
+    @Published var rocket: RocketModel?
+    @Published var launchpad: LaunchpadModel?
+    @Published var flickerImages = [Data]()
+    @Published var launchpadImage: Data?
+
     init() {
-        getNextLaunchData()
         getUpcomingData()
         getPastLaunchData()
         getCompanyData()
@@ -49,15 +52,15 @@ final class ContentVM: ObservableObject {
                 
                 self.upcomingMisisons.0 = missions
                 
-                for mission in missions {
-                    if let URLPatch = mission.links?.patch?.small {
-                        Network.fetchData(from: URLPatch) { data, error in
-                            if let imageData = data, error == .none {
-                                self.upcomingMisisons.1[mission.id] = imageData
-                            }
-                        }
-                    }
-                }
+//                for mission in missions {
+//                    if let URLPatch = mission.links?.patch?.small {
+//                        Network.fetchData(from: URLPatch) { data, error in
+//                            if let imageData = data, error == .none {
+//                                self.upcomingMisisons.1[mission.id] = imageData
+//                            }
+//                        }
+//                    }
+//                }
                 
                 self.isLoading.toggle()
             } else if error == .network {
@@ -104,16 +107,58 @@ final class ContentVM: ObservableObject {
 
     }
     
-    private func getNextLaunchData() {
-        self.isLoading.toggle()
+
+    func getRocketData(rocketID: String? = nil) {
         
-        Network.getNextLaunche { launch, error in
-            if let launch = launch, error == .none {
-                self.nextLaunch = launch
+        Network.getRockets(id: rocketID) { rockets, error in
+            if let rockets = rockets, error == .none {
+                
+                self.rocket = rockets.first
+                
             } else if error == .network {
                 
             }
         }
-
     }
+    
+    func getLaunchpadData(launchpadID: String? = nil) {
+        
+        Network.getLaunchpads(id: launchpadID) { launchpads, error in
+            if let launchpads = launchpads, error == .none {
+                
+                let launchpad = launchpads.first
+                self.launchpad = launchpad
+            }
+        }
+    }
+    
+    
+    func getFlikerImages(links: [String]) {
+    
+        if links.count > 0 {
+            for link in links {
+                Network.fetchData(from: link) { data, error in
+                    if let data = data, error == .none {
+                        self.flickerImages.append(data)
+                    }
+                }
+            }
+        }
+    }
+    
+    func getLaunchpadImage(url: String) {
+        self.isLoading = true
+        Network.fetchData(from: url) { data, error in
+            if let data = data, error == .none {
+                self.launchpadImage = data
+            }
+            self.isLoading = false
+        }
+    }
+    
+    func clearPublishers() {
+        self.rocket = nil
+        self.launchpad = nil
+    }
+
 }

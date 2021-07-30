@@ -37,3 +37,10 @@ struct Coordinate: Identifiable {
         CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
     }
 }
+
+struct LaunchDateModel {
+    let day: String
+    let hour: String
+    let minute: String
+    let second: String
+}
