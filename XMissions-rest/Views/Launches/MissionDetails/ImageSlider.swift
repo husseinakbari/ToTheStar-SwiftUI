@@ -52,7 +52,7 @@ struct ImageSliderView2: View {
             VStack(alignment: .center) {
                 Image(systemName: "photo")
                     .font(.system(size: 40))
-                    .foregroundColor(Color("background"))
+                    .foregroundColor(Color("navy-blue"))
             }
             .frame(width: UIScreen.main.bounds.width, height: 260)
             .background(Color("dark-gray"))

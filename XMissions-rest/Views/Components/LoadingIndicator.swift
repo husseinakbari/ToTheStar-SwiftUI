@@ -12,7 +12,7 @@ struct LoadingIndicator: View {
     let size: CGFloat
     let color: Color
     
-    init(size: CGFloat = 50, color: Color = Color("background")) {
+    init(size: CGFloat = 50, color: Color = Color("navy-blue")) {
         self.size = size
         self.color = color
     }

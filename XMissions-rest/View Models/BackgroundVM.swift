@@ -10,13 +10,14 @@ import Foundation
 final class BackgroundVM: ObservableObject {
     @Published var nextLaunch: LaunchModel?
     @Published var nextLaunchDate: LaunchDateModel?
-    
+    @Published var isLoading: Bool = false
     
     init() {
         getNextLaunchData()
     }
     
     private func getNextLaunchData() {
+        self.isLoading.toggle()
         
         Network.getNextLaunche { launch, error in
             
@@ -28,7 +29,7 @@ final class BackgroundVM: ObservableObject {
                 if date > Date() {
                     self.startCountingNextLaunch(date: date)
                 }
-                
+                self.isLoading.toggle()
             } else if error == .network {
                 
             }

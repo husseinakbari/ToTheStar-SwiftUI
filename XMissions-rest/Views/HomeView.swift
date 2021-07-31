@@ -18,14 +18,18 @@ struct HomeView: View {
                 
                 VStack {
                     
-                    if let nextLaunch = backgroundVM.nextLaunch,
-                       let nextLaunchDate = backgroundVM.nextLaunchDate {
-                        
-                        NavigationLink(
-                            destination: MissionDetails(launch: nextLaunch, launchImage: Data()),
-                            label: {
-                                NextLaunchView(launch: nextLaunch, launchTime: nextLaunchDate)
-                            })
+                    if !backgroundVM.isLoading, backgroundVM.nextLaunchDate != nil {
+                        if let nextLaunch = backgroundVM.nextLaunch,
+                           let nextLaunchDate = backgroundVM.nextLaunchDate {
+                            
+                            NavigationLink(
+                                destination: MissionDetails(launch: nextLaunch, launchImage: Data()),
+                                label: {
+                                    NextLaunchView(launch: nextLaunch, launchTime: nextLaunchDate)
+                                })
+                        }
+                    } else {
+                        NextLaunchView(launch: LaunchModel(id: "", name: "#####", flight_number: 1, date_utc: "2021-08-10T00:00:00.000Z", success: false, links: nil, details: "", rocket: "", launchpad: ""), launchTime: LaunchDateModel(day: "00", hour: "00", minute: "00", second: "00")).redacted(reason: .placeholder)
                     }
                     
                     Spacer()
