@@ -26,7 +26,10 @@ struct InformationView: View {
                             .frame(width: frameSize, height: frameSize, alignment: .center)
                             .foregroundColor(.black)
                     } else {
-                        VStack {}
+                        VStack {
+                            Image("default-icon")
+                                .resizable()
+                        }
                         .frame(width: frameSize, height: frameSize, alignment: .center)
                         .background(Color("light-gray"))
                         .cornerRadius(50)

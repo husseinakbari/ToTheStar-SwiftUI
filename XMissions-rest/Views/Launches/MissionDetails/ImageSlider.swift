@@ -33,6 +33,7 @@ struct ImageSliderView: View {
                 selection = selection < images.count ? selection + 1 : 0
             }
         })
+        .background(Color("mid-blue"))
     }
 }
 

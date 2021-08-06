@@ -21,7 +21,7 @@ struct CompanyView: View {
                     
                     ScrollView {
                 
-                        ImageSliderView(images: Tools.missionsImages())
+                        ImageSliderView(images: Tools.companyImages())
                     
                         VStack(spacing: 20) {
                             VStack(spacing: 10) {

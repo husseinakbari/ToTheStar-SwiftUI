@@ -16,8 +16,19 @@ struct Tools {
         
         var images = [Image]()
         
-        for index in 1...6 {
+        for index in 1...5 {
             images.append(Image("mission-\(index)"))
+        }
+        
+        return images
+    }
+    
+    static func companyImages() -> [Image] {
+        
+        var images = [Image]()
+        
+        for index in 1...4 {
+            images.append(Image("company-\(index)"))
         }
         
         return images

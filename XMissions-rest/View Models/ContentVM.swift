@@ -83,15 +83,15 @@ final class ContentVM: ObservableObject {
                 
                 self.pastLaunches.0 = launches
                 
-//                for launche in launches {
-//                    if let URLPatch = launche.links?.patch?.small {
-//                        Network.fetchData(from: URLPatch) { data, error in
-//                            if let imageData = data, error == .none {
-//                                self.pastLaunches.1[launche.id] = imageData
-//                            }
-//                        }
-//                    }
-//                }
+                for launche in launches {
+                    if let URLPatch = launche.links?.patch?.small {
+                        Network.fetchData(from: URLPatch) { data, error in
+                            if let imageData = data, error == .none {
+                                self.pastLaunches.1[launche.id] = imageData
+                            }
+                        }
+                    }
+                }
                 
                 self.isLoading.toggle()
             } else if error == .network {
