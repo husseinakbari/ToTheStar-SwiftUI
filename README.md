@@ -10,12 +10,12 @@ App written in [SwiftUI](https://developer.apple.com/xcode/swiftui/)
 
 ## Preview 📱
 
-<div align="center">
-    <img src="Preview/Home.png" height="400"/>
-    <img src="Preview/Latest.png" height="400" />
-    <img src="Preview/Detail.png" height="400" />
-    <img src="Preview/Rocket.png" height="400" />
-    <img src="Preview/Place.png" height="400" />
+<div>
+    <img src="Preview/Home.png" height="500"/>
+    <img src="Preview/Latest.png" height="500" />
+    <img src="Preview/Detail.png" height="500" />
+    <img src="Preview/Rocket.png" height="500" />
+    <img src="Preview/Place.png" height="500" />
 </div>
 
 ## How to build 🛠
