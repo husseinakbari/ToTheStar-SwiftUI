@@ -1,5 +1,9 @@
-# To The Stars 🚀
+<img src="XMissions-rest/Assets.xcassets/Icon/icon-radius.imageset/Icon@3x.png" width="160" align="right" hspace="20" />
 
+# To The Stars 🚀
+![SwiftUI](https://img.shields.io/badge/SwiftUI-black?logo=swift)
+![Supported platforms](https://img.shields.io/badge/Platform%20Compatibility-iOS-red?logo=apple&?color=red)
+![Xcode version](https://img.shields.io/badge/Xcode%2012+-black?logo=xcode)
 ### Are you interested Spacex activision ? 
 This app show you every things about this company like misisons and upcoming launch.
 App written in [SwiftUI](https://developer.apple.com/xcode/swiftui/)
