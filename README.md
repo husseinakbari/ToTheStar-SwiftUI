@@ -11,11 +11,11 @@ App written in [SwiftUI](https://developer.apple.com/xcode/swiftui/)
 ## Preview 📱
 
 <div align="center">
-    <img src="XMission-images/Preview/Home.png" height="400"/>
-    <img src="XMission-images/Preview/Latest.png" height="400" />
-    <img src="XMission-images/Preview/Detail.png" height="400" />
-    <img src="XMission-images/Preview/Rocket.png" height="400" />
-    <img src="XMission-images/Preview/Place.png" height="400" />
+    <img src="XMissions-rest/Preview/Home.png" height="400"/>
+    <img src="XMissions-rest/Preview/Latest.png" height="400" />
+    <img src="XMissions-rest/Preview/Detail.png" height="400" />
+    <img src="XMissions-rest/Preview/Rocket.png" height="400" />
+    <img src="XMissions-rest/Preview/Place.png" height="400" />
 </div>
 
 ## How to build 🛠
