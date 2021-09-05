@@ -42,6 +42,7 @@ struct ContentView: View {
                 
             
         }
+        .preferredColorScheme(.dark)
         .ignoresSafeArea(.all, edges: [.bottom, .top])
         .alert(isPresented: $contentVM.customAlert.show, content: {
             Alert(

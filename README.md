@@ -8,6 +8,16 @@
 This app show you every things about this company like misisons and upcoming launch.
 App written in [SwiftUI](https://developer.apple.com/xcode/swiftui/)
 
+## Preview 📱
+
+<div align="center">
+    <img src="XMission-images/Preview/Home.png" height="400"/>
+    <img src="XMission-images/Preview/Latest.png" height="400" />
+    <img src="XMission-images/Preview/Detail.png" height="400" />
+    <img src="XMission-images/Preview/Rocket.png" height="400" />
+    <img src="XMission-images/Preview/Place.png" height="400" />
+</div>
+
 ## How to build 🛠
 
 1- Fork the project & Clone it to your desktop.
