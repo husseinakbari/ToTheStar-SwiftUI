@@ -1,4 +1,4 @@
-<img src="XMissions-rest/Assets.xcassets/Icon/icon-radius.imageset/Icon@3x.png" width="160" align="right" hspace="20" />
+<img src="Preview/icon-radius.png" width="160" align="right" hspace="20" />
 
 # To The Stars 🚀
 ![SwiftUI](https://img.shields.io/badge/SwiftUI-black?logo=swift)
@@ -11,11 +11,11 @@ App written in [SwiftUI](https://developer.apple.com/xcode/swiftui/)
 ## Preview 📱
 
 <div align="center">
-    <img src="XMissions-rest/Preview/Home.png" height="400"/>
-    <img src="XMissions-rest/Preview/Latest.png" height="400" />
-    <img src="XMissions-rest/Preview/Detail.png" height="400" />
-    <img src="XMissions-rest/Preview/Rocket.png" height="400" />
-    <img src="XMissions-rest/Preview/Place.png" height="400" />
+    <img src="Preview/Home.png" height="400"/>
+    <img src="Preview/Latest.png" height="400" />
+    <img src="Preview/Detail.png" height="400" />
+    <img src="Preview/Rocket.png" height="400" />
+    <img src="Preview/Place.png" height="400" />
 </div>
 
 ## How to build 🛠
